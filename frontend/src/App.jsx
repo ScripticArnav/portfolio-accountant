@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <nav class="bg-gray-800 text-white dark:bg-gray-900 dark:text-gray-100">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+          <a href="#" class="font-bold text-xl">
+            My Brand
+          </a>
+          <ul class="hidden md:flex space-x-4">
+            <li>
+              <a href="#" class="hover:text-gray-400">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-400">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-400">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-400">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4 6H20M4 12H20M4 18H11z"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
