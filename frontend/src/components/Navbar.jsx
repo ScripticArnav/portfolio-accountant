@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav class="bg-gray-800 text-white dark:bg-gray-900 dark:text-gray-100">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
           <a href="#" class="font-bold text-xl">
-            My Brand
+            AS Fintacxx Solutions
           </a>
           <ul class="hidden md:flex space-x-4">
             <li>

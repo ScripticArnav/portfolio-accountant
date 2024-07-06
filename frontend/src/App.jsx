@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <h1>Welcome to the AS Fintacxx Solutions</h1>
+      <h1 className="text-2xl text-white" >Welcome to the AS Fintacxx Solutions</h1>
       <Footer/>
     </>
   );
