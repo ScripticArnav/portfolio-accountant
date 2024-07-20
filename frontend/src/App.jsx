@@ -1,4 +1,3 @@
-import "./App.css";
 import { Footer, Navbar } from "./components";
 
 function App() {
