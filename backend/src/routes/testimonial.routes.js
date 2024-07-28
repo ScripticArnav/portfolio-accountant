@@ -4,8 +4,8 @@ import { getTestimonials, createTestimonial, updateTestimonial, deleteTestimonia
 const router = Router()
 
 router.route("/create").post(createTestimonial)
-router.route("/read").post(getTestimonials)
-router.route("/update").post(updateTestimonial)
-router.route("/delete/:id").post(deleteTestimonial)
+router.route("/read").get(getTestimonials)
+router.route("/update/:id").put(updateTestimonial)
+router.route("/delete/:id").delete(deleteTestimonial)
 
 export default router

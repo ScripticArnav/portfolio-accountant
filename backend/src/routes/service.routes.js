@@ -5,8 +5,8 @@ import { upload } from "../middlewares/multer.middleware.js";
 const router = Router()
 
 router.route("/create").post(upload.single('photo') ,createService)
-router.route("/read").post(getServices)
-router.route("/update").post(updateService)
-router.route("/delete/:id").post(deleteService)
+router.route("/read").get(getServices)
+router.route("/update/:serviceId").put(updateService)
+router.route("/delete/:serviceId").delete(deleteService)
 
 export default router

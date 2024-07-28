@@ -6,7 +6,9 @@ import { uploadOnCloudinary } from "../utils/cloudinary";
 
 const createService = asyncHandler(async (req, res) => {
   const { title, description, price } = req.body;
-  if ([title, description, price].some((field) => field.trim() === "")) {
+  if (
+    [title, description, price].some((field) => !field || field.trim() === "")
+  ) {
     throw new ApiError(401, "title, description, price cannot be empty");
   }
   const serviceCost = Number(price);
@@ -34,7 +36,7 @@ const createService = asyncHandler(async (req, res) => {
 
   return res
     .status(201)
-    .json(ApiResponce(200, createService, "Service created Successfully"));
+    .json(ApiResponce(200, createdService, "Service created Successfully"));
 });
 
 const getServices = asyncHandler(async (req, res) => {
@@ -45,13 +47,16 @@ const getServices = asyncHandler(async (req, res) => {
 });
 
 const updateService = asyncHandler(async (req, res) => {
+  const { serviceId } = req.params;
   const { title, description, price } = req.body;
-  if ([title, description, price].some((field) => field.trim() === "")) {
+  if (
+    [title, description, price].some((field) => !field || field.trim() === "")
+  ) {
     throw new ApiError(401, "Tilte, description or price cannot be empty");
   }
   const serviceCost = Number(price);
   const service = await Service.findByIdAndUpdate(
-    req.service?._id,
+    serviceId,
     {
       $set: {
         title,
@@ -62,7 +67,7 @@ const updateService = asyncHandler(async (req, res) => {
     { new: true, runValidators: true }
   );
   if (!service) {
-    throw new ApiError("Something wrong happened while updating the service");
+    throw new ApiError(500, "Something went wrong while updating the service");
   }
   return res
     .status(200)
@@ -70,14 +75,14 @@ const updateService = asyncHandler(async (req, res) => {
 });
 
 const deleteService = asyncHandler(async (req, res) => {
-  const { serviceID } = req.params;
-  const service = Service.findByIdAndDelete(serviceID);
+  const { serviceId } = req.params;
+  const service = await Service.findByIdAndDelete(serviceId);
   if (!service) {
-    throw new ApiError("Service not found");
+    throw new ApiError(404, "Service not found");
   }
   return res
     .status(200)
-    .json(new ApiResponce(200, service, "Service deleted successfully"));
+    .json(ApiResponce(200, null, "Service deleted successfully"));
 });
 
 export { createService, getServices, updateService, deleteService };

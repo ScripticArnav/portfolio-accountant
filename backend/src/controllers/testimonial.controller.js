@@ -5,7 +5,7 @@ import { ApiResponce } from "../utils/ApiResponse";
 
 const createTestimonial = asyncHandler(async (req, res) => {
   const { name, review, rating } = req.body;
-  if ([name, review, rating].some((field) => field.trim() === "")) {
+  if ([name, review, rating].some((field) => !field || field.trim() === "")) {
     throw new ApiError(401, "name, review, rating cannot be empty");
   }
   const rate = parseInt(rating);
@@ -26,7 +26,7 @@ const createTestimonial = asyncHandler(async (req, res) => {
 
   return res
     .status(201)
-    .json(ApiResponce(200, rev, "Testimonial fetched successfully"));
+    .json(ApiResponce(201, rev, "Testimonial created successfully"));
 });
 
 const getTestimonials = asyncHandler(async (req, res) => {
@@ -43,13 +43,14 @@ const getTestimonials = asyncHandler(async (req, res) => {
 });
 
 const updateTestimonial = asyncHandler(async (req, res) => {
+  const { id } = req.params;
   const { name, review, rating } = req.body;
-  if ([name, review, rating].some((field) => field.trim() === "")) {
+  if ([name, review, rating].some((field) => !field || field.trim() === "")) {
     throw new ApiError(401, "name, review, rating cannot be empty");
   }
   const rate = parseInt(rating);
   const testimonial = await Testimonial.findByIdAndUpdate(
-    req.testimonial?._id,
+    id,
     {
       $set: {
         name,
@@ -61,6 +62,7 @@ const updateTestimonial = asyncHandler(async (req, res) => {
   );
   if (!testimonial) {
     throw new ApiError(
+      500,
       "Something wrong happened while updating the testimonial"
     );
   }
@@ -70,11 +72,12 @@ const updateTestimonial = asyncHandler(async (req, res) => {
 });
 
 const deleteTestimonial = asyncHandler(async (req, res) => {
-  const { testimonialId } = req.params;
-  const testimonial = await Testimonial.findByIdAndDelete(testimonialId);
+  const { id } = req.params;
+  const testimonial = await Testimonial.findByIdAndDelete(id);
   if (!testimonial) {
-    throw new ApiError("Testimonial not found");
+    throw new ApiError(404, "Testimonial not found");
   }
+
   return res
     .status(200)
     .json(
