@@ -2,6 +2,7 @@ import { Service } from "../models/service.model";
 import { ApiError } from "../utils/ApiError";
 import { ApiResponce } from "../utils/ApiResponse";
 import { asyncHandler } from "../utils/asyncHandler";
+import { uploadOnCloudinary } from "../utils/cloudinary";
 
 const createService = asyncHandler(async (req, res) => {
   const { title, description, price } = req.body;
@@ -9,10 +10,17 @@ const createService = asyncHandler(async (req, res) => {
     throw new ApiError(401, "title, description, price cannot be empty");
   }
   const serviceCost = Number(price);
+  const photoPath = req.files?.photo?.[0]?.path;
+
+  if (!photoPath) {
+    throw new ApiError(401, "No Photo found");
+  }
+  const photo = await uploadOnCloudinary(photoPath);
   const service = await Service.create({
     title,
     description,
     price: serviceCost,
+    photo,
   });
 
   const createdService = await Service.findById(service._id);
