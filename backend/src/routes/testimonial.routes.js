@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getTestimonials, createTestimonial, updateTestimonial, deleteTestimonial } from "../controllers/testimonial.controller";
+import { getTestimonials, createTestimonial, updateTestimonial, deleteTestimonial } from "../controllers/testimonial.controller.js";
 
 const router = Router()
 

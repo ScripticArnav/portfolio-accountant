@@ -1,8 +1,8 @@
-import { Service } from "../models/service.model";
-import { ApiError } from "../utils/ApiError";
-import { ApiResponce } from "../utils/ApiResponse";
-import { asyncHandler } from "../utils/asyncHandler";
-import { uploadOnCloudinary } from "../utils/cloudinary";
+import { Service } from "../models/service.model.js";
+import { ApiError } from "../utils/ApiError.js";
+import { ApiResponce } from "../utils/ApiResponse.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 const createService = asyncHandler(async (req, res) => {
   const { title, description, price } = req.body;
@@ -12,7 +12,7 @@ const createService = asyncHandler(async (req, res) => {
     throw new ApiError(401, "title, description, price cannot be empty");
   }
   const serviceCost = Number(price);
-  const photoPath = req.files?.photo?.[0]?.path;
+  const photoPath = req.file?.path;
 
   if (!photoPath) {
     throw new ApiError(401, "No Photo found");
@@ -22,7 +22,7 @@ const createService = asyncHandler(async (req, res) => {
     title,
     description,
     price: serviceCost,
-    photo,
+    photo: photoPath,
   });
 
   const createdService = await Service.findById(service._id);
@@ -36,14 +36,14 @@ const createService = asyncHandler(async (req, res) => {
 
   return res
     .status(201)
-    .json(ApiResponce(200, createdService, "Service created Successfully"));
+    .json(new ApiResponce(200, createdService, "Service created Successfully"));
 });
 
 const getServices = asyncHandler(async (req, res) => {
   const services = await Service.find();
   return res
     .status(200)
-    .json(ApiResponce(200, services, "Fetched all the services successfully"));
+    .json(new ApiResponce(200, services, "Fetched all the services successfully"));
 });
 
 const updateService = asyncHandler(async (req, res) => {
@@ -82,7 +82,7 @@ const deleteService = asyncHandler(async (req, res) => {
   }
   return res
     .status(200)
-    .json(ApiResponce(200, null, "Service deleted successfully"));
+    .json(new ApiResponce(200, null, "Service deleted successfully"));
 });
 
 export { createService, getServices, updateService, deleteService };

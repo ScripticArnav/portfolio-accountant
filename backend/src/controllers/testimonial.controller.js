@@ -1,7 +1,7 @@
-import { ApiError } from "../utils/ApiError";
-import { asyncHandler } from "../utils/asyncHandler";
-import { Testimonial } from "../models/testimonial.model";
-import { ApiResponce } from "../utils/ApiResponse";
+import { ApiError } from "../utils/ApiError.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { Testimonial } from "../models/testimonial.model.js";
+import { ApiResponce } from "../utils/ApiResponse.js";
 
 const createTestimonial = asyncHandler(async (req, res) => {
   const { name, review, rating } = req.body;
@@ -26,7 +26,7 @@ const createTestimonial = asyncHandler(async (req, res) => {
 
   return res
     .status(201)
-    .json(ApiResponce(201, rev, "Testimonial created successfully"));
+    .json(new ApiResponce(201, rev, "Testimonial created successfully"));
 });
 
 const getTestimonials = asyncHandler(async (req, res) => {
