@@ -8,7 +8,7 @@ const Navbar = () => {
           <a href="#" class="font-bold text-xl">
             AS Fintacxx Solutions
           </a>
-          <ul class="hidden md:flex space-x-4">
+          <ul class="hidden md:flex space-x-6">
             <li>
               <a href="#" class="hover:text-gray-400">
                 Home
