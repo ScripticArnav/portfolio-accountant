@@ -1,33 +1,34 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       <nav class="bg-gray-800 text-white dark:bg-gray-900 dark:text-gray-100">
         <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-          <a href="#" class="font-bold text-xl">
+          <Link href="#" class="font-bold text-xl">
             AS Fintacxx Solutions
-          </a>
+          </Link>
           <ul class="hidden md:flex space-x-6">
             <li>
-              <a href="#" class="hover:text-gray-400">
+              <NavLink to="/home" class="hover:text-gray-400">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" class="hover:text-gray-400">
+              <NavLink to="/about" class="hover:text-gray-400">
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" class="hover:text-gray-400">
-                Services
-              </a>
+              <NavLink to="/service" class="hover:text-gray-400">
+                Service
+              </NavLink>
             </li>
             <li>
-              <a href="#" class="hover:text-gray-400">
+              <NavLink to="/contact" class="hover:text-gray-400">
                 Contact
-              </a>
+              </NavLink>
             </li>
           </ul>
           <button id="menu-toggle" class="md:hidden focus:outline-none">
