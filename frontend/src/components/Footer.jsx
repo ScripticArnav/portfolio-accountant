@@ -12,38 +12,38 @@ const Footer = () => {
                 class="h-8 me-3"
                 alt="FlowBite Logo"
               />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 AS Fintacxx Solution
               </span>
             </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-white">
+              <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-orange-700">
                 Resources
               </h2>
-              <ul class="text-white-500 dark:text-white-400 font-medium">
+              <ul class="text-gray-300 dark:text-white-400 font-medium">
                 <li class="mb-4">
-                  <a href="https://flowbite.com/" class="hover:underline">
+                  <a href="https://flowbite.com/" class="hover:text-orange-700">
                     Flowbite
                   </a>
                 </li>
                 <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline">
+                  <a href="https://tailwindcss.com/" class="hover:text-orange-700">
                     Tailwind CSS
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-white">
+              <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-orange-700">
                 Follow us
               </h2>
-              <ul class="text-white-500 dark:text-gray-400 font-medium">
+              <ul class="text-gray-300 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
                     href="https://github.com/themesberg/flowbite"
-                    class="hover:underline "
+                    class="hover:text-orange-700 "
                   >
                     Github
                   </a>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://discord.gg/4eeurUVvTy"
-                    class="hover:underline"
+                    class="hover:text-orange-700"
                   >
                     Discord
                   </a>
@@ -59,17 +59,17 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-white">
+              <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-orange-700">
                 Legal
               </h2>
-              <ul class="text-white-500 dark:text-gray-400 font-medium">
+              <ul class="text-gray-300 dark:text-gray-400 font-medium">
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
+                  <a href="#" class="hover:text-orange-700">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">
+                  <a href="#" class="hover:text-orange-700">
                     Terms &amp; Conditions
                   </a>
                 </li>
