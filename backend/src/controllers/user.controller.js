@@ -6,17 +6,17 @@ import { User } from "../models/user.model.js";
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
-  if ([name, email, password].some((field) => field.trim() === "")) {
-    throw new ApiError(400, "All the fields are required");
+  if ([name, email, password].some((field) => field?.trim() === "")) {
+    throw new ApiError(400, "All fields are required");
   }
 
   const existedUser = await User.findOne({ email });
   if (existedUser) {
-    throw new ApiError(409, "User with email already exist");
+    throw new ApiError(409, "User with email already exists");
   }
 
   const user = await User.create({
-    name: name.toLowerCase(),
+    name,
     email,
     password,
   });
@@ -29,14 +29,14 @@ const registerUser = asyncHandler(async (req, res) => {
 
   return res
     .status(201)
-    .json(new ApiResponce(200, createdUser, "User Registered Successfully"));
+    .json(new ApiResponce(200, createdUser, "User registered successfully"));
 });
 
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
-  if (!password && !email) {
-    throw new ApiError(400, "Email or Password is required");
+  if (!email || !password) {
+    throw new ApiError(400, "Email and password are required");
   }
 
   const user = await User.findOne({ email });
@@ -46,25 +46,14 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 
   const isPasswordValid = await user.isPasswordCorrect(password);
-  console.log(isPasswordValid);
+
   if (!isPasswordValid) {
     throw new ApiError(401, "Invalid user credentials");
   }
 
   const loggedInUser = await User.findById(user._id).select("-password");
 
-  const { accessToken } = await user.generateAccessToken();
-
-  return res.status(200).json(
-    new ApiResponce(
-      200,
-      {
-        user: loggedInUser,
-        accessToken,
-      },
-      "User Logged In Successfully"
-    )
-  );
+  return res.status(200).json(new ApiResponce(200, loggedInUser, "User logged in successfully"));
 });
 
 export { registerUser, loginUser };
