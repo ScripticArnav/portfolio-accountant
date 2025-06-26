@@ -1,3 +1,3 @@
-const backendUrl = 'https://localhost/7777/api/vi'
+const backendUrl = 'http://localhost:8000/api/v1'
 
 export default backendUrl

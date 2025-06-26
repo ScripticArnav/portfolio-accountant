@@ -4,7 +4,9 @@ import serviceReducer from "./features/serviceSlice.js"
 import testimonialReducer from "./features/testimonialSlice.js"
 
 export const store = configureStore({
-    auth: authReducer,
-    service: serviceReducer,
-    testimonial: testimonialReducer,
+    reducer: {
+        auth: authReducer,
+        service: serviceReducer,
+        testimonial: testimonialReducer,
+    }
 })
