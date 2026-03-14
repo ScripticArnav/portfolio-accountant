@@ -12,6 +12,7 @@ import Service from './pages/Service.jsx'
 import SignIn from './pages/SignIn.jsx'
 import SignUp from './pages/SignUp.jsx'
 import Profile from './pages/Profile.jsx'
+import Users from './pages/Users.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path='signin' element={<SignIn/>}/>
       <Route path='signup' element={<SignUp/>}/>
       <Route path='profile' element={<Profile/>}/>
+      <Route path='users' element={<Users/>}/>
     </Route>
   )
 )
