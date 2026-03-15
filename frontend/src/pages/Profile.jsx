@@ -37,7 +37,7 @@ const Profile = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-black">
       <div className="w-full max-w-4xl px-6 py-16 flex flex-col items-center justify-center bg-white/10 rounded-3xl">
         <img src={logo} alt="logo" className="h-20 w-20 mb-4" />
-        <span className="text-3xl font-bold tracking-tight mb-6 text-white">AS Fintaccx Solution</span>
+        <span className="text-3xl font-bold tracking-tight mb-6 text-white">ASFintaccx Solutions</span>
         <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide font-extrabold text-white mb-4">
           Welcome to your <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">Profile</span>
         </h1>

@@ -9,6 +9,8 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Services from './pages/Services.jsx'
+import GlobalServices from './pages/GlobalServices.jsx'
+import KnowledgeBank from './pages/KnowledgeBank.jsx'
 import SignIn from './pages/SignIn.jsx'
 import SignUp from './pages/SignUp.jsx'
 import Profile from './pages/Profile.jsx'
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
       <Route path='contact' element={<Contact/>}/>
       <Route path='service' element={<Services/>}/>
       <Route path='services' element={<Services/>}/>
+      <Route path='global-services' element={<GlobalServices/>}/>
+      <Route path='knowledge-bank' element={<KnowledgeBank/>}/>
       <Route path='signin' element={<SignIn/>}/>
       <Route path='signup' element={<SignUp/>}/>
       <Route path='profile' element={<Profile/>}/>

@@ -28,7 +28,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-                  FinTaccX
+                  ASFintaccx Solutions
                 </h3>
                 <p className="text-sm text-gray-400">Financial Excellence</p>
               </div>
@@ -97,7 +97,7 @@ const Footer = () => {
                 <EnvelopeIcon className="w-6 h-6 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Email</p>
-                  <a href="mailto:info@fintaccx.in" className="text-white hover:text-primary-400 transition-colors">info@fintaccx.in</a>
+                  <a href="mailto:info@asfintaccx.com" className="text-white hover:text-primary-400 transition-colors">info@asfintaccx.com</a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -117,7 +117,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm md:text-base">
-              © {currentYear} FinTaccX. All rights reserved. | Designed for Financial Excellence
+              © {currentYear} ASFintaccx Solutions. All rights reserved. | Designed for Financial Excellence
             </p>
             <div className="flex items-center space-x-6">
               <Link to="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>

@@ -60,7 +60,7 @@ const About = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            About <span className="text-yellow-300">FinTaccX</span>
+            About <span className="text-yellow-300">ASFintaccx Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-12 opacity-90">
             Pioneering financial excellence since 2013. Your trusted partner for accounting, tax, and advisory services.
@@ -115,7 +115,7 @@ const About = () => {
               <div className="space-y-6 text-xl text-gray-600 leading-relaxed">
                 <p>
                   Founded in 2013 by a team of Chartered Accountants with a vision to revolutionize financial services, 
-                  FinTaccX has grown from a 5-member startup to a 50+ expert team serving 500+ clients globally.
+                  ASFintaccx Solutions has grown from a 5-member startup to a 50+ expert team serving 500+ clients globally.
                 </p>
                 <p>
                   Our journey reflects our commitment to excellence, innovation, and client success. Today, we are 

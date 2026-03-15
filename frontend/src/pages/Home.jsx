@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import backendUrl from '../url.js';
 import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
 import BlogCard from '../components/BlogCard';
@@ -15,8 +16,8 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [servicesRes, blogsRes] = await Promise.all([
-          axios.get('/api/v1/services'),
-          axios.get('/api/v1/blogs').catch(() => ({ data: [] }))
+          axios.get(`${backendUrl}/services`),
+          axios.get(`${backendUrl}/blogs`).catch(() => ({ data: [] }))
         ]);
         const servicesList = Array.isArray(servicesRes.data) ? servicesRes.data : (servicesRes.data?.data ?? []);
         const blogsList = Array.isArray(blogsRes.data) ? blogsRes.data : (blogsRes.data?.data ?? []);

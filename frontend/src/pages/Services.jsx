@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import backendUrl from '../url.js';
 import {
   ArrowRightIcon,
   CheckCircleIcon,
@@ -111,7 +112,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get('/api/v1/services');
+        const response = await axios.get(`${backendUrl}/services`);
         const raw = response.data;
         const list = Array.isArray(raw) ? raw : (raw?.data ?? []);
         const listSafe = Array.isArray(list) ? list : [];
