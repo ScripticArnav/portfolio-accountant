@@ -1,4 +1,4 @@
-import { Service } from "../models/service.model.js";
+import { Service } from "../models/Service.model.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponce } from "../utils/ApiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";

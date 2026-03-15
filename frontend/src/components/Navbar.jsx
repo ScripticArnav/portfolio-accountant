@@ -1,135 +1,141 @@
-import React from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../store/features/authSlice";
-import logo from  "../assets/logo.png";
-import { navItems } from "../constants";
-import {Menu, X} from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-const Navbar = () => {
-  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  const user = useSelector((state) => state.auth.user);
-
-  const toggleNavbar = () => {
-    setMobileDrawerOpen(!mobileDrawerOpen);
-  };
 
   const handleLogout = () => {
-    dispatch(logout());
-    navigate("/");
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    setIsAuthenticated(false);
   };
 
   return (
-    <>
-      <nav className="sticky top-0 z-50 py-3 bg-black border-b border-neutral-700/80">
-      <div className="container px-4 mx-auto relative text-sm">
-        <div className="flex justify-between items-center">
-           <div className="flex items-center flex-shrink-0">
-            <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
-            <span className="text-xl tracking-tight text-white">AS Fintaccx solution</span>
-           </div>
-           <ul className="hidden lg:flex ml-14 space-x-12">
-           {navItems.map((item, index) => (
-              <li key={index}>
-                <NavLink
-                  to={item.href}
-                  className={({ isActive }) =>
-                    isActive
-                      ? "border-b-2 border-orange-600 pb-1 text-orange-700 font-semibold"
-                      : "hover:text-orange-700 transition-colors text-white"
-                  }
-                  end={item.href === "/"}
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-xl">F</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900">FinTaccX</span>
+            </Link>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+              location.pathname === '/' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
+            }`}>
+              Home
+            </Link>
+            <Link to="/about" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+              location.pathname === '/about' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
+            }`}>
+              About
+            </Link>
+            <Link to="/services" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+              location.pathname === '/services' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
+            }`}>
+              Services
+            </Link>
+            <Link to="/global-services" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+              location.pathname === '/global-services' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
+            }`}>
+              Global Services
+            </Link>
+            <Link to="/knowledge-bank" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+              location.pathname === '/knowledge-bank' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
+            }`}>
+              Knowledge Bank
+            </Link>
+            <Link to="/contact" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+              location.pathname === '/contact' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
+            }`}>
+              Contact
+            </Link>
+            
+            {isAuthenticated ? (
+              <>
+                <Link to="/client-portal" className="py-2 px-3 text-sm font-medium rounded-md transition-colors text-primary-600 bg-primary-50">
+                  Client Portal
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="py-2 px-4 bg-primary-600 text-white text-sm font-medium rounded-md hover:bg-primary-700 transition-colors"
                 >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-           </ul>
-           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            {!isAuthenticated && location.pathname !== "/signin" && (
-              <Link to="/signin" className="py-2 px-3 border rounded-md text-white border-orange-600">
-                Sign In
-              </Link>
-            )}
-            {!isAuthenticated && location.pathname !== "/signup" && (
-              <Link
-                to="/signup"
-                className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md text-white"
-              >
-                Create an account
-              </Link>
-            )}
-            {isAuthenticated && (
-              <Link to="/profile" className="flex items-center">
-                <img
-                  src={user?.avatar || logo}
-                  alt="Profile"
-                  className="h-10 w-10 rounded-full border-2 border-orange-500 object-cover hover:scale-105 transition"
-                />
+                  Logout
+                </button>
+              </>
+            ) : (
+              <Link to="/login" className="py-2 px-4 bg-primary-600 text-white text-sm font-medium rounded-md hover:bg-primary-700 transition-colors">
+                Login
               </Link>
             )}
           </div>
-          <div className="lg:hidden md:flex flex-col justify-end">
-            <button onClick={toggleNavbar}>
-                {mobileDrawerOpen ? <X/> :<Menu/>}
-            </button>
 
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-md text-gray-700 hover:text-primary-600"
+            >
+              {mobileOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
           </div>
         </div>
-        {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-            <ul>
-              {navItems.map((item, index) => (
-                <li key={index} className="py-4">
-                  <NavLink
-                    to={item.href}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "border-b-2 border-orange-600 pb-1 text-orange-700 font-semibold"
-                        : "hover:text-orange-700 transition-colors text-white"
-                    }
-                    end={item.href === "/"}
-                  >
-                    {item.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-            <div className="flex space-x-6 items-center mt-4">
-              {!isAuthenticated && location.pathname !== "/signin" && (
-                <Link to="/signin" className="py-2 px-3 border rounded-md text-white border-orange-600">
-                  Sign In
-                </Link>
-              )}
-              {!isAuthenticated && location.pathname !== "/signup" && (
-                <Link
-                  to="/signup"
-                  className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800 text-white"
-                >
-                  Create an account
-                </Link>
-              )}
-              {isAuthenticated && (
-                <Link to="/profile" className="flex items-center">
-                  <img
-                    src={user?.avatar || logo}
-                    alt="Profile"
-                    className="h-10 w-10 rounded-full border-2 border-orange-500 object-cover hover:scale-105 transition"
-                  />
-                </Link>
-              )}
-            </div>
-          </div>
-        )}
       </div>
 
-      </nav>
-    </>
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="px-4 pt-2 pb-3 space-y-1">
+            <Link to="/" className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600">
+              Home
+            </Link>
+            <Link to="/about" className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600">
+              About
+            </Link>
+            <Link to="/services" className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600">
+              Services
+            </Link>
+            <Link to="/global-services" className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600">
+              Global Services
+            </Link>
+            <Link to="/knowledge-bank" className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600">
+              Knowledge Bank
+            </Link>
+            <Link to="/contact" className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600">
+              Contact
+            </Link>
+            {isAuthenticated ? (
+              <>
+                <Link to="/client-portal" className="block py-2 px-3 text-base font-medium text-primary-600">
+                  Client Portal
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="block w-full text-left py-2 px-3 text-base font-medium text-primary-600 hover:bg-primary-50"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <Link to="/login" className="block py-2 px-3 text-base font-medium text-primary-600">
+                Login
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 

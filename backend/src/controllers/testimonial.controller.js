@@ -34,7 +34,7 @@ const getTestimonials = asyncHandler(async (req, res) => {
   return res
     .status(200)
     .json(
-      ApiResponce(
+      new ApiResponce(
         200,
         testimonials,
         "Fetched all the testimonials successfully"
