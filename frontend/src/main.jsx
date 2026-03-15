@@ -11,7 +11,7 @@ import Contact from './pages/Contact.jsx'
 import Services from './pages/Services.jsx'
 import GlobalServices from './pages/GlobalServices.jsx'
 import KnowledgeBank from './pages/KnowledgeBank.jsx'
-import SignIn from './pages/SignIn.jsx'
+import Login from './pages/Login.jsx'
 import SignUp from './pages/SignUp.jsx'
 import Profile from './pages/Profile.jsx'
 import Users from './pages/Users.jsx'
@@ -26,7 +26,8 @@ const router = createBrowserRouter(
       <Route path='services' element={<Services/>}/>
       <Route path='global-services' element={<GlobalServices/>}/>
       <Route path='knowledge-bank' element={<KnowledgeBank/>}/>
-      <Route path='signin' element={<SignIn/>}/>
+      <Route path='signin' element={<Login/>}/>
+      <Route path='login' element={<Login/>}/>
       <Route path='signup' element={<SignUp/>}/>
       <Route path='profile' element={<Profile/>}/>
       <Route path='users' element={<Users/>}/>
