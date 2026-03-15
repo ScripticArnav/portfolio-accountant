@@ -42,11 +42,11 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
             }`}>
               Services
             </Link>
-            <Link to="/global-services" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
+            {/* <Link to="/global-services" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
               location.pathname === '/global-services' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
             }`}>
               Global Services
-            </Link>
+            </Link> */}
             <Link to="/knowledge-bank" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
               location.pathname === '/knowledge-bank' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
             }`}>
