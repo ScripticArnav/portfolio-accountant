@@ -8,12 +8,10 @@ dotenv.config({
 
 const PORT = process.env.PORT || 7000;
 
-connectDB()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.log("Mongodb connection has some problem src/index");
-  });
+// Start HTTP server regardless of DB status so JSON-based routes keep working
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+// Try to connect DB in background (optional for services JSON route)
+connectDB();
