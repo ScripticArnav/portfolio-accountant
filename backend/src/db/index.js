@@ -9,8 +9,9 @@ const connectDB = async () => {
         console.log(`\n MoongoDB connected ! DB host: ${connectionInstance.connection.host}`);
 
     } catch (error) {
-        console.log("MongoDB connetion error", error)
-        process.exit(1)
+        console.log("MongoDB connetion error", error);
+        // Don't crash the server if MongoDB is not reachable;
+        // allow routes that don't depend on DB (like static JSON services) to keep working.
     }
 }
 

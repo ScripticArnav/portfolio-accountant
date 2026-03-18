@@ -1,0 +1,148 @@
+[
+  {
+    "id": "accounting",
+    "title": "Accounting Services",
+    "icon": "📊",
+    "category": "Core",
+    "featured": true,
+    "description": "Comprehensive accounting solutions tailored for modern businesses",
+    "details": "Bookkeeping, financial reporting, reconciliation, audit preparation, and cloud accounting implementation.",
+    "benefits": [
+      "99.9% accuracy guarantee",
+      "Real-time financial insights",
+      "Multi-currency support",
+      "Automated reconciliation"
+    ],
+    "price": "Starting ₹15,000/month"
+  },
+  {
+    "id": "tax",
+    "title": "Tax Planning & Compliance",
+    "icon": "💰",
+    "category": "Core",
+    "featured": true,
+    "description": "Strategic tax planning and 100% compliance assurance",
+    "details": "GST filing, Income tax returns, TDS compliance, Transfer pricing, International tax advisory.",
+    "benefits": [
+      "25% average tax savings",
+      "100% compliance guarantee",
+      "Advance tax planning",
+      "Litigation support"
+    ],
+    "price": "Starting ₹25,000/year"
+  },
+  {
+    "id": "payroll",
+    "title": "Payroll Services",
+    "icon": "👥",
+    "category": "Core",
+    "featured": false,
+    "description": "Streamlined payroll processing with statutory compliance",
+    "details": "Salary processing, PF/ESIC filing, Payslip generation, Leave management, Payroll audits.",
+    "benefits": [
+      "Error-free processing",
+      "Real-time compliance updates",
+      "Employee self-service portal",
+      "Custom reporting"
+    ],
+    "price": "₹500/employee/month"
+  },
+  {
+    "id": "compliance",
+    "title": "Corporate Compliance",
+    "icon": "✅",
+    "category": "Regulatory",
+    "featured": false,
+    "description": "End-to-end regulatory compliance management",
+    "details": "ROC filings, Annual returns, Board resolutions, Secretarial audits, FEMA compliance.",
+    "benefits": [
+      "Zero penalty guarantee",
+      "Automated reminders",
+      "Compliance dashboard",
+      "Expert legal support"
+    ],
+    "price": "Starting ₹20,000/year"
+  },
+  {
+    "id": "setup",
+    "title": "Business Setup",
+    "icon": "🏢",
+    "category": "Setup",
+    "featured": false,
+    "description": "Complete business incorporation and setup services",
+    "details": "Company registration, LLP formation, GST registration, PAN/TAN, Bank account opening.",
+    "benefits": [
+      "Setup in 7 days",
+      "End-to-end documentation",
+      "Government liaison",
+      "Post-setup compliance"
+    ],
+    "price": "Starting ₹25,000"
+  },
+  {
+    "id": "loans",
+    "title": "Loans & Funding",
+    "icon": "🏦",
+    "category": "Funding",
+    "featured": false,
+    "description": "Access to business loans and funding opportunities",
+    "details": "Working capital loans, MSME loans, Term loans, Invoice discounting, Government schemes.",
+    "benefits": [
+      "90% approval rate",
+      "Fast processing",
+      "Best interest rates",
+      "End-to-end support"
+    ],
+    "price": "Free consultation"
+  },
+  {
+    "id": "risk",
+    "title": "Risk Assessment",
+    "icon": "⚠️",
+    "category": "Advisory",
+    "featured": false,
+    "description": "Comprehensive financial risk analysis and mitigation",
+    "details": "Financial risk audit, Cash flow forecasting, Stress testing, Risk mitigation strategies.",
+    "benefits": [
+      "Identify hidden risks",
+      "Scenario analysis",
+      "Custom mitigation plans",
+      "Ongoing monitoring"
+    ],
+    "price": "Starting ₹50,000"
+  },
+  {
+    "id": "advisory",
+    "title": "Business Advisory",
+    "icon": "💡",
+    "category": "Advisory",
+    "featured": false,
+    "description": "Strategic business advisory for growth and optimization",
+    "details": "Financial modeling, Valuation services, M&A advisory, Expansion planning, Cost optimization.",
+    "benefits": [
+      "30% average cost reduction",
+      "Growth strategy roadmap",
+      "Exit planning",
+      "Investor readiness"
+    ],
+    "price": "Starting ₹75,000"
+  },
+  {
+    "id": "auxiliary",
+    "title": "Business Auxiliary Services",
+    "icon": "🔧",
+    "category": "Support",
+    "featured": false,
+    "description": "Complete business support ecosystem",
+    "details": "Virtual office, Registered office, Nominee director, Company secretary services, Document storage.",
+    "benefits": [
+      "Cost-effective solutions",
+      "100% compliance",
+      "Scalable services",
+      "24/7 support"
+    ],
+    "price": "Starting ₹10,000/month"
+  }
+]
+
+
