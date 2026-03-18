@@ -317,9 +317,9 @@ const Contact = () => {
                     <span className="text-2xl">🇮🇳</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-gray-900 mb-2">Mumbai HQ</h4>
-                    <p className="text-gray-600 mb-2">Business Plaza, MG Road</p>
-                    <p className="text-gray-600 mb-2">Mumbai, MH 400001</p>
+                    <h4 className="font-bold text-xl text-gray-900 mb-2">Office</h4>
+                    <p className="text-gray-600 mb-2">LIG 1223</p>
+                    <p className="text-gray-600 mb-2">Kanpur, UP 208017</p>
                     <p className="text-indigo-600 font-semibold">Mon-Sat 9AM-7PM</p>
                   </div>
                 </div>
@@ -344,12 +344,12 @@ const Contact = () => {
                 Quick Contact
               </h3>
               <div className="space-y-6">
-                <div className="flex items-center justify-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group" onClick={() => window.location.href = 'tel:+919876543210'}>
+                <div className="flex items-center justify-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow cursor-pointer group" onClick={() => window.location.href = 'tel:+919919553216'}>
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mr-6 group-hover:scale-110 transition-transform">
                     <PhoneIcon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-emerald-700 group-hover:text-emerald-800 transition-colors">+91 98765 43210</div>
+                    <div className="text-2xl font-bold text-emerald-700 group-hover:text-emerald-800 transition-colors">+91 99195 53216</div>
                     <div className="text-sm text-gray-600">Call Now</div>
                   </div>
                 </div>
