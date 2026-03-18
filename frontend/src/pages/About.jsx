@@ -21,28 +21,11 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: 'Amit Sharma',
-      role: 'Founder & Managing Director',
+      name: 'Anirudh Saxena',
+      role: 'Founder & CEO',
+      credential: 'CMA, LLB',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
-      credential: 'CA, CPA, MBA Finance'
-    },
-    {
-      name: 'Priya Patel',
-      role: 'Chief Financial Officer',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400',
-      credential: 'CA, CFA Level III'
-    },
-    {
-      name: 'Rahul Mehta',
-      role: 'Head of Tax & Compliance',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-      credential: 'CA, CS, LLB'
-    },
-    {
-      name: 'Neha Gupta',
-      role: 'Director - Global Services',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400',
-      credential: 'CA, ACCA, US CPA'
+      credential: 'CMA, LLB'
     }
   ];
 

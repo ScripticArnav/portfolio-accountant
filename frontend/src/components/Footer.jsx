@@ -90,7 +90,7 @@ const Footer = () => {
                 <PhoneIcon className="w-6 h-6 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Phone</p>
-                  <a href="tel:+919876543210" className="text-white hover:text-primary-400 transition-colors">+91 98765 43210</a>
+                  <a href="tel:+919919553216" className="text-white hover:text-primary-400 transition-colors">+91 9919553216</a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -104,7 +104,7 @@ const Footer = () => {
                 <MapPinIcon className="w-6 h-6 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Address</p>
-                  <p className="text-white max-w-xs leading-relaxed">Business Plaza, MG Road, Mumbai, MH 400001</p>
+                  <p className="text-white max-w-xs leading-relaxed">LIG 1223, Awas Vikas No.3, Kalyanpur, Kanpur, Uttar Pradesh, India</p>
                 </div>
               </div>
             </div>
