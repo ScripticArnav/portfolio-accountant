@@ -166,47 +166,7 @@ const Home = () => {
       </section>
 
       {/* 5. Global Services Overview */}
-      <section className="py-24 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <span className="inline-flex px-6 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-lg font-semibold rounded-3xl mb-8 shadow-2xl">
-              🌍 Global Reach, Local Expertise
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              World-Class Services for 
-              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Global Businesses
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: 'Accounting & Bookkeeping', desc: 'Multi-currency accounting for international operations', icon: '🌐' },
-              { title: 'Taxation Services', desc: 'Cross-border tax compliance and optimization', icon: '💼' },
-              { title: 'CPA Outsourcing', desc: 'US GAAP and IFRS compliant financial reporting', icon: '📋' }
-            ].map((service, index) => (
-              <div key={index} className="group bg-white/70 backdrop-blur-xl rounded-3xl p-10 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 border border-white/50 hover:border-indigo-200">
-                <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
-                  <span className="text-2xl">{service.icon}</span>
-                </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h4>
-                <p className="text-gray-600 mb-8">{service.desc}</p>
-                <Link to="/global-services" className="text-primary-600 font-semibold hover:text-primary-700 transition-colors">Learn More →</Link>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <Link to="/global-services" className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white text-xl font-bold rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-2xl">
-              View Global Services
-              <svg className="ml-4 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
+    
 
       {/* 6. Latest Updates / Calculators */}
       <section className="py-24 bg-gray-900 text-white">
