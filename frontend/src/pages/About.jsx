@@ -25,11 +25,7 @@ const About = () => {
       role: 'Founder & CEO',
       credential: 'CMA, LLB',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
-<<<<<<< HEAD
-      credential: 'CMA, LLB'
-=======
       credential: 'CA, CPA, MBA Finance'
->>>>>>> 27a7b7632a4d8c4fc7d51f7a97421ccf672d7f0e
     }
   ];
 
