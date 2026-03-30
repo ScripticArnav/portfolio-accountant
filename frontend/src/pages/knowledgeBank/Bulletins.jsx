@@ -1,11 +1,28 @@
+import KnowledgeTemplate from "./KnowledgeTemplate";
+
 const Bulletins = () => {
   return (
-    <div className="p-10">
-      <h1 className="text-4xl font-bold mb-6">Bulletins</h1>
-      <p className="text-lg text-gray-600">
-        Yahan bulletins aur updates show hongi.
-      </p>
-    </div>
+    <KnowledgeTemplate
+      title="Bulletins"
+      description="Latest regulatory bulletins, circulars, and official announcements."
+      cards={[
+        {
+          title: "GST Circulars",
+          description: "Timely circulars with implementation guidance.",
+          items: ["Rate changes", "Compliance clarifications", "Return timelines"]
+        },
+        {
+          title: "CBDT Notifications",
+          description: "Income tax notices and procedural updates.",
+          items: ["Section updates", "Due date extensions", "Penalty relaxations"]
+        },
+        {
+          title: "RBI Advisories",
+          description: "Banking and payment compliance bulletins.",
+          items: ["Payment systems", "Reserve requirements", "Data security"]
+        }
+      ]}
+    />
   );
 };
 

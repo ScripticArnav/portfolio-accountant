@@ -1,11 +1,28 @@
+import KnowledgeTemplate from "./KnowledgeTemplate";
+
 const Utilities = () => {
   return (
-    <div className="p-10">
-      <h1 className="text-4xl font-bold mb-6">Utilities</h1>
-      <p className="text-lg text-gray-600">
-        Yahan tum calculators, tools, compliance helpers add kar sakte ho.
-      </p>
-    </div>
+    <KnowledgeTemplate
+      title="Utilities"
+      description="Handy tools and checklists to accelerate compliance workflows."
+      cards={[
+        {
+          title: "Tax Due-Date Calendar",
+          description: "Stay ahead with an organized calendar for all tax deadlines.",
+          items: ["GST returns", "TDS payments", "Income Tax filings"]
+        },
+        {
+          title: "Compliance Checklist",
+          description: "Step-by-step checklist for monthly/quarterly/annual filings.",
+          items: ["Company Compliance", "GST Returns", "Audit preparation"]
+        },
+        {
+          title: "Document Templates",
+          description: "Standardized templates for audits, filings, and agreements.",
+          items: ["Power of Attorney", "Engagement Letter", "Service Agreements"]
+        }
+      ]}
+    />
   );
 };
 

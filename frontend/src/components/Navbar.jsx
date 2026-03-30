@@ -208,7 +208,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
               <div className="relative group">
               <button
                 className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname.startsWith("//knowledge-bank")
+                  location.pathname.startsWith("/knowledge-bank")
                     ? "text-primary-600 bg-primary-50"
                     : "text-gray-700 hover:text-primary-600"
                 }`}
