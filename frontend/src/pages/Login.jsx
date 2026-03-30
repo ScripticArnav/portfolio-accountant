@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { EyeIcon, EyeSlashIcon, LockClosedIcon } from '@heroicons/react/24/outline';
+import { login } from '../store/features/authSlice';
+import backendUrl from '../url.js';
 
-const Login = ({ setIsAuthenticated }) => {
+const Login = () => {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
@@ -13,16 +16,15 @@ const Login = ({ setIsAuthenticated }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [loginStatus, setLoginStatus] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // Check if already logged in
   useEffect(() => {
     const token = localStorage.getItem('token');
-    const user = localStorage.getItem('user');
-    if (token && user) {
-      setIsAuthenticated(true);
+    if (token) {
       navigate('/client-portal');
     }
-  }, [navigate, setIsAuthenticated]);
+  }, [navigate]);
 
   const validateForm = () => {
     const newErrors = {};
@@ -69,17 +71,18 @@ const Login = ({ setIsAuthenticated }) => {
     setErrors({});
 
     try {
-      const response = await axios.post('/api/auth/login', credentials, {
+      const response = await axios.post(`${backendUrl}/api/auth/login`, credentials, {
         headers: {
           'Content-Type': 'application/json'
         }
       });
 
-      // Store token and user data
+      // Store token and user data in localStorage
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
       
-      setIsAuthenticated(true);
+      // Dispatch login action to Redux
+      dispatch(login(response.data.user));
       
       // Redirect based on role
       const user = response.data.user;
@@ -305,7 +308,7 @@ const Login = ({ setIsAuthenticated }) => {
           <p className="text-lg text-gray-700 mb-4">
             Don't have an account?{' '}
             <Link 
-              to="/register" 
+              to="/signup" 
               className="font-bold text-primary-600 hover:text-primary-700 transition-colors hover:underline"
             >
               Create Account

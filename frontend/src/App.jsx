@@ -1,7 +1,4 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-// import { HashRouter as Router } from "react-router-dom";
-import { useState, useEffect } from "react";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -9,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/contact/Contact";
 import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import ClientPortal from "./pages/ClientPortal";
 
 // ✅ Calculator Pages
@@ -41,21 +39,11 @@ import Bulletins from "./pages/knowledgeBank/Bulletins";
 import Blogs from "./pages/knowledgeBank/Blogs";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsAuthenticated(!!token);
-  }, []);
-
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-50">
         
-        <Navbar
-          isAuthenticated={isAuthenticated}
-          setIsAuthenticated={setIsAuthenticated}
-        />
+        <Navbar />
 
         <main className="flex-grow">
           <Routes>
@@ -96,10 +84,8 @@ function App() {
             {/* ✅ Other Pages */}
             <Route path="/Contact" element={<Contact />} />
 
-            <Route
-              path="/login"
-              element={<Login setIsAuthenticated={setIsAuthenticated} />}
-            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
 
             <Route path="/client-portal" element={<ClientPortal />} />
 

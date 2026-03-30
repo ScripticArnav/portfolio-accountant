@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 
@@ -18,6 +19,9 @@ app.use(
 
 app.use(express.json());
 app.use(cookieParser());
+
+// ✅ Auth Routes
+app.use("/api/auth", authRoutes);
 
 // ✅ Contact Schema
 const contactSchema = new mongoose.Schema({
