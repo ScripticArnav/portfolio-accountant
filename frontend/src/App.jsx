@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Contact from "./pages/contact/Contact";
 import Login from "./pages/Login";
 import ClientPortal from "./pages/ClientPortal";
 
@@ -94,7 +94,7 @@ function App() {
             <Route path="/knowledge-bank/blogs" element={<Blogs />} />
 
             {/* ✅ Other Pages */}
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/Contact" element={<Contact />} />
 
             <Route
               path="/login"

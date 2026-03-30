@@ -7,7 +7,7 @@ import { store } from './store/store.js'
 import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
-import Contact from './pages/Contact.jsx'
+import Contact from './pages/contact/Contact.jsx'
 
 import Rules from './pages/knowledgeBank/Rules.jsx'
 import Acts from './pages/knowledgeBank/Acts.jsx'
@@ -47,7 +47,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout/>}>
       <Route path='/' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
-      <Route path='contact' element={<Contact/>}/>
+      <Route path='Contact' element={<Contact/>}/>
 
       <Route path='knowledge-bank/forms' element={<Forms/>}/>
       <Route path='knowledge-bank/rules' element={<Rules/>}/>
