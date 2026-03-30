@@ -220,10 +220,10 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {(Array.isArray(blogs) && blogs.length > 0) ? blogs.map((blog) => (
-              <BlogCard key={blog._id} blog={blog} />
+            {(Array.isArray(blogs) && blogs.length > 0) ? blogs.map((blog, index) => (
+              <BlogCard key={blog._id || blog.id || index} blog={blog} />
             )) : Array(3).fill().map((_, index) => (
-              <BlogCard key={index} blog={{
+              <BlogCard key={`fallback-blog-${index}`} blog={{
                 title: 'Sample Blog Post',
                 excerpt: 'Discover the latest trends in financial compliance...',
                 image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
