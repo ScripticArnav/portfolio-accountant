@@ -79,7 +79,7 @@ const Navbar = () => {
 
                 {/* Mega Menu Dropdown */}
                 {megaMenu[item.label] && (
-                  <div className="absolute left-0 mt-0 w-auto bg-white shadow-2xl rounded-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                  <div className="absolute top-full mt-0 bg-white shadow-2xl rounded-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-50 w-max max-w-4xl left-1/2 transform -translate-x-1/2">
                     <div className="flex p-6 gap-8">
                       {/* Left Panel */}
                       <div className="w-56 border-r border-gray-200">
@@ -88,7 +88,6 @@ const Navbar = () => {
                             <button
                               key={idx}
                               onMouseEnter={() => setHoveredItem(leftItem.title)}
-                              onMouseLeave={() => setHoveredItem(null)}
                               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-md transition-colors text-left ${
                                 hoveredItem === leftItem.title
                                   ? "bg-blue-50 text-slate-900"
@@ -104,10 +103,10 @@ const Navbar = () => {
                       </div>
 
                       {/* Right Panel */}
-                      <div className="w-64">
+                      <div className="w-72 max-h-96 overflow-y-auto">
                         {hoveredItem && megaMenu[item.label].right[hoveredItem] && (
                           <div>
-                            <h3 className="font-bold text-slate-900 mb-4 text-base">
+                            <h3 className="font-bold text-slate-900 mb-4 text-base sticky top-0 bg-white">
                               {hoveredItem}
                             </h3>
                             <div className="space-y-3">
