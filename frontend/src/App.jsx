@@ -40,6 +40,23 @@ import Forms from "./pages/knowledgeBank/Forms";
 import Bulletins from "./pages/knowledgeBank/Bulletins";
 import Blogs from "./pages/knowledgeBank/Blogs";
 
+// ✅ Mega Menu Services Category Pages
+import BusinessRegistrationIndex from "./pages/services/business-registration/index";
+import TaxComplianceIndex from "./pages/services/tax-compliance/index";
+import TrademarkIPIndex from "./pages/services/trademark-ip/index";
+import LawyerServicesIndex from "./pages/services/lawyer-services/index";
+import DocumentationIndex from "./pages/services/documentation/index";
+import OthersIndex from "./pages/services/others/index";
+
+// ✅ Mega Menu Services Detail Pages
+import PrivateLimitedCompany from "./pages/services/business-registration/PrivateLimitedCompany";
+import LimitedLiabilityPartnership from "./pages/services/business-registration/LimitedLiabilityPartnership";
+import GSTRegistration from "./pages/services/tax-compliance/GSTRegistration";
+import TrademarkRegistration from "./pages/services/trademark-ip/TrademarkRegistration";
+import CorporateLawyers from "./pages/services/lawyer-services/CorporateLawyers";
+import RentalAgreement from "./pages/services/documentation/RentalAgreement";
+import IncomeTaxCalc from "./pages/services/others/IncomeTaxCalculator";
+
 function App() {
   return (
     <Router>
@@ -82,6 +99,23 @@ function App() {
             <Route path="/knowledge-bank/forms" element={<Forms />} />
             <Route path="/knowledge-bank/bulletins" element={<Bulletins />} />
             <Route path="/knowledge-bank/blogs" element={<Blogs />} />
+
+            {/* ✅ Mega Menu Services Category Routes */}
+            <Route path="/services/business-registration" element={<BusinessRegistrationIndex />} />
+            <Route path="/services/tax-compliance" element={<TaxComplianceIndex />} />
+            <Route path="/services/trademark-ip" element={<TrademarkIPIndex />} />
+            <Route path="/services/lawyer-services" element={<LawyerServicesIndex />} />
+            <Route path="/services/documentation" element={<DocumentationIndex />} />
+            <Route path="/services/others" element={<OthersIndex />} />
+
+            {/* ✅ Mega Menu Services Detail Routes */}
+            <Route path="/services/private-limited-company" element={<PrivateLimitedCompany />} />
+            <Route path="/services/limited-liability-partnership" element={<LimitedLiabilityPartnership />} />
+            <Route path="/services/gst-registration" element={<GSTRegistration />} />
+            <Route path="/services/trademark-registration" element={<TrademarkRegistration />} />
+            <Route path="/services/corporate-lawyers" element={<CorporateLawyers />} />
+            <Route path="/services/rental-agreement" element={<RentalAgreement />} />
+            <Route path="/services/income-tax-calculator" element={<IncomeTaxCalc />} />
 
             {/* ✅ Other Pages */}
             <Route path="/Contact" element={<Contact />} />

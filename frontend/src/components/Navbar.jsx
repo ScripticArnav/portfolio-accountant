@@ -114,10 +114,10 @@ const Navbar = () => {
                                 (subItem, idx) => (
                                   <Link
                                     key={idx}
-                                    to="#"
-                                    className="block py-2 text-sm text-slate-700 hover:text-slate-900 hover:font-medium transition-colors"
+                                    to={subItem.href}
+                                    className="block py-2 text-sm text-slate-700 hover:text-blue-600 hover:font-medium transition-colors"
                                   >
-                                    {subItem}
+                                    {subItem.label}
                                   </Link>
                                 )
                               )}
