@@ -3,296 +3,160 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../store/features/authSlice";
+import { megaMenu } from "../constants";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hoveredMenu, setHoveredMenu] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   
   // Get auth state from Redux
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
-  const user = useSelector(state => state.auth.user);
 
   const handleLogout = () => {
     dispatch(logout());
     navigate("/");
   };
 
+  const menuItems = [
+    { label: "Business Registration", href: "/business-registration" },
+    { label: "Tax & Compliance", href: "/tax-compliance" },
+    { label: "Trademark & IP", href: "/trademark-ip" },
+    { label: "Lawyer Services", href: "/lawyer-services" },
+    { label: "Documentation", href: "/documentation" },
+    { label: "Others", href: "/others" },
+  ];
+
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-slate-900 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">F</span>
+        <div className="flex justify-between items-center h-20">
+          {/* Logo + Consult Button */}
+          <div className="flex items-center space-x-4">
+            <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
+              <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center shadow-md">
+                <span className="text-slate-900 font-bold text-xl">F</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">
-                ASFintaccx Solutions
+              <span className="text-white font-bold text-lg hidden sm:inline">
+                ASFintaccx
               </span>
             </Link>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
-              className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                location.pathname === "/"
-                  ? "text-primary-600 bg-primary-50"
-                  : "text-gray-700 hover:text-primary-600"
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                location.pathname === "/about"
-                  ? "text-primary-600 bg-primary-50"
-                  : "text-gray-700 hover:text-primary-600"
-              }`}
-            >
-              About
-            </Link>
-            {/* <Link
-              to="/services"
-              className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                location.pathname === "/services"
-                  ? "text-primary-600 bg-primary-50"
-                  : "text-gray-700 hover:text-primary-600"
-              }`}
-            >
-              Services
-            </Link> */}
+          {/* "Consult an Expert" Button */}
+          <div className="hidden md:block">
+            <button className="px-4 py-2 bg-yellow-400 text-slate-900 text-sm font-bold rounded-md hover:bg-yellow-300 transition-colors duration-200">
+              Consult an Expert ▼
+            </button>
+          </div>
 
-<div className="relative group">
-              <button
-                className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname.startsWith("/services")
-                    ? "text-primary-600 bg-primary-50"
-                    : "text-gray-700 hover:text-primary-600"
-                }`}
+          {/* Desktop Menu with Mega Menu */}
+          <div className="hidden md:flex items-center space-x-1">
+            {menuItems.map((item) => (
+              <div
+                key={item.label}
+                className="relative group"
+                onMouseEnter={() => setHoveredMenu(item.label)}
+                onMouseLeave={() => {
+                  setHoveredMenu(null);
+                  setHoveredItem(null);
+                }}
               >
-                Services 
-                <span className="text-xs"> ▼ </span>
-              </button>
-
-              <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
                 <Link
-                  to="/services/account"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  to={item.href}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center space-x-1 ${
+                    hoveredMenu === item.label
+                      ? "text-yellow-400 bg-slate-800"
+                      : "text-gray-300 hover:text-yellow-400 hover:bg-slate-800"
+                  }`}
                 >
-                  Account
-                </Link>
-                <Link
-                  to="/services/loans"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Loans
-                </Link>
-                <Link
-                  to="/services/taxation"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Taxation
-                </Link>
-                <Link
-                  to="/services/risk-assessment"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Risk Assessment
-                </Link>
-                <Link
-                  to="/services/advisory"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Advisory
-                </Link>
-                <Link
-                  to="/services/business-auxiliary"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Business Auxiliary
-                </Link>
-                <Link
-                  to="/services/finance"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Finance
-                </Link>
-                <Link
-                  to="/services/business-setup"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Business Setup
-                </Link>
-                <Link
-                  to="/services/corporate-compliance"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Corporate Compliance
-                </Link>
-                <Link
-                  to="/services/payroll"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Payroll
+                  <span>{item.label}</span>
+                  <span className="text-xs">▼</span>
                 </Link>
 
+                {/* Mega Menu Dropdown */}
+                {megaMenu[item.label] && (
+                  <div className="absolute left-0 mt-0 w-auto bg-white shadow-2xl rounded-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                    <div className="flex p-6 gap-8">
+                      {/* Left Panel */}
+                      <div className="w-56 border-r border-gray-200">
+                        <div className="space-y-3">
+                          {megaMenu[item.label].left.map((leftItem, idx) => (
+                            <button
+                              key={idx}
+                              onMouseEnter={() => setHoveredItem(leftItem.title)}
+                              onMouseLeave={() => setHoveredItem(null)}
+                              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-md transition-colors text-left ${
+                                hoveredItem === leftItem.title
+                                  ? "bg-blue-50 text-slate-900"
+                                  : "text-slate-700 hover:bg-gray-50"
+                              }`}
+                            >
+                              <span className="text-xl">{leftItem.icon}</span>
+                              <span className="font-medium text-sm">{leftItem.title}</span>
+                              <span className="text-gray-400 ml-auto">→</span>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Right Panel */}
+                      <div className="w-64">
+                        {hoveredItem && megaMenu[item.label].right[hoveredItem] && (
+                          <div>
+                            <h3 className="font-bold text-slate-900 mb-4 text-base">
+                              {hoveredItem}
+                            </h3>
+                            <div className="space-y-3">
+                              {megaMenu[item.label].right[hoveredItem].map(
+                                (subItem, idx) => (
+                                  <Link
+                                    key={idx}
+                                    to="#"
+                                    className="block py-2 text-sm text-slate-700 hover:text-slate-900 hover:font-medium transition-colors"
+                                  >
+                                    {subItem}
+                                  </Link>
+                                )
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Footer CTA */}
+                    <div className="bg-blue-50 px-6 py-4 border-t border-gray-200 rounded-b-lg flex items-center space-x-2">
+                      <span className="text-blue-600">👤</span>
+                      <span className="text-sm text-slate-700">
+                        Prefer to talk to a business advisor first?
+                        <Link to="#" className="text-blue-600 hover:underline ml-1">
+                          Book a call back
+                        </Link>
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* <Link to="/calculators" className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-              location.pathname === '/calculators' ? 'text-primary-600 bg-primary-50' : 'text-gray-700 hover:text-primary-600'
-            }`}>
-              Calculators
-            </Link> */}
-            <div className="relative group">
-              <button
-                className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname.startsWith("/calculators")
-                    ? "text-primary-600 bg-primary-50"
-                    : "text-gray-700 hover:text-primary-600"
-                }`}
-              >
-                Calculators
-                <span className="text-xs"> ▼ </span>
-              </button>
-
-              <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-                <Link
-                  to="/calculators/gst"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  GST
-                </Link>
-                <Link
-                  to="/calculators/emi"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  EMI
-                </Link>
-                <Link
-                  to="/calculators/income-tax"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Income Tax
-                </Link>
-                <Link
-                  to="/calculators/sip"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  SIP
-                </Link>
-                <Link
-                  to="/calculators/tds"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  TDS
-                </Link>
-                <Link
-                  to="/calculators/hra"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  HRA Exemption
-                </Link>{" "}
-              </div>
-            </div>
-
-            {/* <Link
-              to="/knowledge-bank"
-              className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                location.pathname === "/knowledge-bank"
-                  ? "text-primary-600 bg-primary-50"
-                  : "text-gray-700 hover:text-primary-600"
-              }`}
-            >
-              Knowledge Bank
-            </Link> */}
-
-              <div className="relative group">
-              <button
-                className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname.startsWith("/knowledge-bank")
-                    ? "text-primary-600 bg-primary-50"
-                    : "text-gray-700 hover:text-primary-600"
-                }`}
-              >
-                Knowledge Bank
-                <span className="text-xs"> ▼ </span>
-              </button>
-
-              <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-                <Link
-                  to="/knowledge-bank/bulletins"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Bulletins
-                </Link>
-                <Link
-                  to="/knowledge-bank/blogs"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Blogs
-                </Link>
-                <Link
-                  to="/knowledge-bank/rules"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Rules
-                </Link>
-                <Link
-                  to="/knowledge-bank/acts"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Acts
-                </Link>
-                <Link
-                  to="/knowledge-bank/links"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Links
-                </Link>
-                <Link
-                  to="/knowledge-bank/utilities"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Utilities
-                </Link>
-                <Link
-                  to="/knowledge-bank/forms"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >
-                  Forms
-                </Link>
-                
-              </div>
-            </div>
-
-            <Link
-              to="/contact"
-              className={`py-2 px-3 text-sm font-medium rounded-md transition-colors ${
-                location.pathname === "/contact"
-                  ? "text-primary-600 bg-primary-50"
-                  : "text-gray-700 hover:text-primary-600"
-              }`}
-            >
-              Contact
-            </Link>
-
+          {/* Right Side: Auth Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
             {isAuthenticated ? (
               <>
                 <Link
                   to="/client-portal"
-                  className="py-2 px-3 text-sm font-medium rounded-md transition-colors text-primary-600 bg-primary-50"
+                  className="px-4 py-2 text-sm font-medium text-yellow-400 hover:text-white transition-colors"
                 >
-                  Client Portal
+                  Portal
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="py-2 px-4 bg-primary-600 text-white text-sm font-medium rounded-md hover:bg-primary-700 transition-colors"
+                  className="px-6 py-2 bg-yellow-400 text-slate-900 text-sm font-bold rounded-md hover:bg-yellow-300 transition-colors duration-200"
                 >
                   Logout
                 </button>
@@ -300,7 +164,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/login"
-                className="py-2 px-4 bg-primary-600 text-white text-sm font-medium rounded-md hover:bg-primary-700 transition-colors"
+                className="px-6 py-2 bg-yellow-400 text-slate-900 text-sm font-bold rounded-md hover:bg-yellow-300 transition-colors duration-200"
               >
                 Login
               </Link>
@@ -311,7 +175,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-md text-gray-700 hover:text-primary-600"
+              className="p-2 rounded-md text-gray-300 hover:text-yellow-400"
             >
               {mobileOpen ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -325,67 +189,57 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-4 pt-2 pb-3 space-y-1">
-            <Link
-              to="/"
-              className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600"
-            >
-              About
-            </Link>
-            <Link
-              to="/services"
-              className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600"
-            >
-              Services
-            </Link>
-            <Link
-              to="/calculators"
-              className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600"
-            >
-              Calculators
-            </Link>
-            <Link
-              to="/knowledge-bank"
-              className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600"
-            >
-              Knowledge Bank
-            </Link>
-            <Link
-              to="/contact"
-              className="block py-2 px-3 text-base font-medium text-gray-700 hover:text-primary-600"
-            >
-              Contact
-            </Link>
-            {isAuthenticated ? (
-              <>
-                <Link
-                  to="/client-portal"
-                  className="block py-2 px-3 text-base font-medium text-primary-600"
-                >
-                  Client Portal
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  className="block w-full text-left py-2 px-3 text-base font-medium text-primary-600 hover:bg-primary-50"
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
+        <div className="md:hidden bg-slate-800 border-t border-slate-700">
+          <div className="px-4 pt-2 pb-4 space-y-2">
+            <button className="w-full py-3 px-4 bg-yellow-400 text-slate-900 text-base font-bold rounded-md hover:bg-yellow-300 transition-colors">
+              Consult an Expert ▼
+            </button>
+
+            {menuItems.map((item) => (
               <Link
-                to="/login"
-                className="block py-2 px-3 text-base font-medium text-primary-600"
+                key={item.href}
+                to={item.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block py-3 px-4 rounded-md text-base font-medium transition-colors ${
+                  location.pathname === item.href || location.pathname.startsWith(item.href)
+                    ? "text-yellow-400 bg-slate-700"
+                    : "text-gray-300 hover:text-yellow-400 hover:bg-slate-700"
+                }`}
               >
-                Login
+                {item.label}
               </Link>
-            )}
+            ))}
+            
+            <div className="border-t border-slate-700 pt-3 mt-3">
+              {isAuthenticated ? (
+                <>
+                  <Link
+                    to="/client-portal"
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-2 px-4 text-base font-medium text-yellow-400 hover:text-white"
+                  >
+                    Client Portal
+                  </Link>
+                  <button
+                    onClick={() => {
+                      handleLogout();
+                      setMobileOpen(false);
+                    }}
+                    className="w-full text-left py-3 px-4 bg-yellow-400 text-slate-900 text-base font-bold rounded-md hover:bg-yellow-300 transition-colors mt-2"
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/login"
+                  onClick={() => setMobileOpen(false)}
+                  className="block w-full py-3 px-4 bg-yellow-400 text-slate-900 text-base font-bold rounded-md hover:bg-yellow-300 transition-colors text-center"
+                >
+                  Login
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       )}

@@ -5,7 +5,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/contact/Contact";
-import Login from "./pages/Login";
+import ClientLogin from "./pages/Login";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 import SignUp from "./pages/SignUp";
 import ClientPortal from "./pages/ClientPortal";
 
@@ -84,10 +86,14 @@ function App() {
             {/* ✅ Other Pages */}
             <Route path="/Contact" element={<Contact />} />
 
-            <Route path="/login" element={<Login />} />
+            {/* ✅ Login Routes - Separate for Client and Admin */}
+            <Route path="/login" element={<ClientLogin />} />
+            <Route path="/login/client" element={<ClientLogin />} />
+            <Route path="/login/admin" element={<AdminLogin />} />
             <Route path="/signup" element={<SignUp />} />
 
             <Route path="/client-portal" element={<ClientPortal />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
 
             {/* ✅ Optional: 404 fallback */}
             <Route path="*" element={<div className="p-10 text-center">Page Not Found</div>} />

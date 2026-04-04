@@ -6,7 +6,7 @@ import { EyeIcon, EyeSlashIcon, LockClosedIcon } from '@heroicons/react/24/outli
 import { login } from '../store/features/authSlice';
 import backendUrl from '../url.js';
 
-const ClientLogin = () => {
+const AdminLogin = () => {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
@@ -18,14 +18,14 @@ const ClientLogin = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // Check if already logged in
+  // Check if already logged in as admin
   useEffect(() => {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
     if (token && user) {
       const userData = JSON.parse(user);
-      if (userData.role === 'user') {
-        navigate('/client-portal');
+      if (userData.role === 'admin') {
+        navigate('/admin-dashboard');
       }
     }
   }, [navigate]);
@@ -75,30 +75,30 @@ const ClientLogin = () => {
     setErrors({});
 
     try {
-      const response = await axios.post(`${backendUrl}/api/auth/client/login`, credentials, {
+      const response = await axios.post(`${backendUrl}/api/auth/admin/login`, credentials, {
         headers: {
           'Content-Type': 'application/json'
         }
       });
 
-      // Store token and user data in localStorage
+      // Store token and user data in localStorage with admin prefix
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
-      localStorage.setItem('userType', 'client');
+      localStorage.setItem('userType', 'admin');
       
       // Dispatch login action to Redux
       dispatch(login(response.data.user));
       
-      // Redirect to client portal
-      navigate('/client-portal');
+      // Redirect to admin dashboard
+      navigate('/admin-dashboard');
       
     } catch (error) {
       if (error.response?.status === 403) {
         setLoginStatus('unauthorized');
-        setErrors({ form: 'Access denied. Please use the client login.' });
+        setErrors({ form: 'You are not authorized as an admin. Please contact support.' });
       } else if (error.response?.status === 401) {
         setLoginStatus('invalid');
-        setErrors({ form: 'Invalid credentials. Please check your email and password.' });
+        setErrors({ form: 'Admin credentials not found or invalid password.' });
       } else {
         setLoginStatus('error');
         setErrors({ form: error.response?.data?.message || 'Login failed. Please try again.' });
@@ -109,7 +109,7 @@ const ClientLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-pink-500 to-purple-700 flex items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
@@ -118,8 +118,8 @@ const ClientLogin = () => {
               <LockClosedIcon className="h-8 w-8 text-white" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2">Client Login</h1>
-          <p className="text-purple-100">Access your portfolio and services</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Admin Portal</h1>
+          <p className="text-blue-100">Secure admin access only</p>
         </div>
 
         {/* Login Form */}
@@ -132,8 +132,8 @@ const ClientLogin = () => {
           )}
 
           {loginStatus === 'invalid' && (
-            <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
-              <p className="text-orange-700 text-sm font-medium">Invalid email or password</p>
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-red-700 text-sm font-medium">Invalid admin credentials</p>
             </div>
           )}
 
@@ -147,7 +147,7 @@ const ClientLogin = () => {
             {/* Email Input */}
             <div>
               <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                Email Address
+                Admin Email
               </label>
               <input
                 type="email"
@@ -158,9 +158,9 @@ const ClientLogin = () => {
                 className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none ${
                   errors.email
                     ? 'border-red-300 focus:border-red-500'
-                    : 'border-gray-300 focus:border-purple-500'
+                    : 'border-gray-300 focus:border-blue-500'
                 }`}
-                placeholder="Enter your email"
+                placeholder="Enter admin email"
                 disabled={isLoading}
               />
               {errors.email && (
@@ -183,9 +183,9 @@ const ClientLogin = () => {
                   className={`w-full px-4 py-3 rounded-lg border-2 transition-colors focus:outline-none pr-12 ${
                     errors.password
                       ? 'border-red-300 focus:border-red-500'
-                      : 'border-gray-300 focus:border-purple-500'
+                      : 'border-gray-300 focus:border-blue-500'
                   }`}
-                  placeholder="Enter your password"
+                  placeholder="Enter password"
                   disabled={isLoading}
                 />
                 <button
@@ -213,36 +213,31 @@ const ClientLogin = () => {
               className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-colors ${
                 isLoading
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-purple-600 hover:bg-purple-700 active:bg-purple-800'
+                  : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800'
               }`}
             >
-              {isLoading ? 'Logging in...' : 'Client Login'}
+              {isLoading ? 'Logging in...' : 'Admin Login'}
             </button>
           </form>
 
-          {/* Sign Up Link */}
-          <div className="mt-6 text-center">
-            <p className="text-gray-600 text-sm">
-              Don't have an account? 
-              <Link to="/signup" className="ml-2 text-purple-600 hover:text-purple-700 font-semibold">
-                Sign Up
-              </Link>
-            </p>
-          </div>
-
-          {/* Admin Login Link */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
+          {/* Divider */}
+          <div className="mt-8 pt-8 border-t border-gray-200">
             <p className="text-center text-gray-600 text-sm">
-              Admin? 
-              <Link to="/login/admin" className="ml-2 text-blue-600 hover:text-blue-700 font-semibold">
-                Admin Login
+              Client? 
+              <Link to="/login/client" className="ml-2 text-blue-600 hover:text-blue-700 font-semibold">
+                Client Login
               </Link>
             </p>
           </div>
         </div>
+
+        {/* Footer */}
+        <p className="text-center text-blue-100 text-xs mt-6">
+          Admin access restricted. If you believe this is an error, please contact support.
+        </p>
       </div>
     </div>
   );
 };
 
-export default ClientLogin;
+export default AdminLogin;

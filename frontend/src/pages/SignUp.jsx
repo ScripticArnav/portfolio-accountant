@@ -91,7 +91,7 @@ const SignUp = () => {
     setErrors({});
 
     try {
-      const response = await axios.post(`${backendUrl}/api/auth/signup`, {
+      const response = await axios.post(`${backendUrl}/api/auth/client/signup`, {
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
@@ -107,6 +107,7 @@ const SignUp = () => {
       // Store token and user data in localStorage
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
+      localStorage.setItem('userType', 'client');
 
       // Dispatch login action to Redux
       dispatch(login(response.data.user));

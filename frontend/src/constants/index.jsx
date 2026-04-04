@@ -14,6 +14,234 @@ export const navItems = [
   { label: "Testimonials", href: "/contact" },
   { label: "Users", href: "/users" },
 ];
+
+export const megaMenu = {
+  "Business Registration": {
+    left: [
+      { title: "Company Registration", icon: "📋" },
+      { title: "International Business Setup", icon: "🌍" },
+      { title: "Company Name Search", icon: "🔍" },
+      { title: "Licenses & Registrations", icon: "📄" },
+      { title: "Web Development", icon: "💻" },
+    ],
+    right: {
+      "Company Registration": [
+        "Private Limited Company",
+        "Limited Liability Partnership",
+        "One Person Company",
+        "Sole Proprietorship",
+        "Nidhi Company",
+        "Producer Company",
+        "Partnership Firm",
+        "Startup India Registration",
+      ],
+      "International Business Setup": [
+        "US Incorporation",
+        "Singapore Incorporation",
+        "UK Incorporation",
+        "Netherlands Incorporation",
+        "Hong Kong Company Incorporation",
+        "Dubai Company Incorporation",
+        "International Trademark Registration",
+      ],
+      "Company Name Search": [
+        "Company Name Search",
+        "Change Company Name",
+        "Business Name Generator",
+      ],
+      "Licenses & Registrations": [
+        "Digital Signature Certificate",
+        "Udyam Registration",
+        "MSME Registration",
+        "ISO Certification",
+        "FSSAI [Food License]",
+        "IEC [Import/Export Code]",
+        "Apeda RCMC",
+        "Spice Board Registration",
+        "FIEO Registration",
+        "Legal Metrology",
+        "Hallmark Registration",
+        "BIS Registration",
+        "Liquor License",
+        "CLRA Registration & Licensing",
+        "AD Code Registration",
+        "IRDAI Registration",
+        "Drug & Cosmetic License",
+        "Customs Clearance",
+      ],
+      "Web Development": [
+        "Web/E-Commerce Website Development",
+      ],
+    },
+  },
+  "Tax & Compliance": {
+    left: [
+      { title: "Income Tax", icon: "💰" },
+      { title: "GST", icon: "📊" },
+      { title: "ITR Filing", icon: "📝" },
+      { title: "Audit & Accounts", icon: "✓" },
+    ],
+    right: {
+      "Income Tax": [
+        "Income Tax Return",
+        "Tax Planning",
+        "Tax Notice Response",
+        "Tax Optimization",
+      ],
+    },
+  },
+  "Trademark & IP": {
+    left: [
+      { title: "Trademark", icon: "™️" },
+      { title: "Copyright", icon: "©️" },
+      { title: "Patent", icon: "🔒" },
+      { title: "Design", icon: "🎨" },
+    ],
+    right: {
+      "Trademark": [
+        "Trademark Search",
+        "Trademark Registration",
+        "International Trademark",
+        "Opposition",
+      ],
+    },
+  },
+  "Lawyer Services": {
+    left: [
+      { title: "Legal Consultation", icon: "⚖️" },
+      { title: "Contract Drafting", icon: "📋" },
+      { title: "Dispute Resolution", icon: "🤝" },
+      { title: "Legal Documentation", icon: "📄" },
+    ],
+    right: {
+      "Legal Consultation": [
+        "Corporate Law",
+        "Labour Law",
+        "Business Law",
+        "Contract Review",
+      ],
+    },
+  },
+  "Documentation": {
+    left: [
+      { title: "Business Documents", icon: "📑" },
+      { title: "Legal Documents", icon: "⚖️" },
+      { title: "Tax Documents", icon: "💼" },
+      { title: "Compliance Documents", icon: "✓" },
+    ],
+    right: {
+      "Business Documents": [
+        "MOA & AOA",
+        "Board Resolutions",
+        "Employment Contracts",
+        "NDA & Agreements",
+      ],
+    },
+  },
+};
+
+export const servicesMenu = [
+  {
+    name: "Account",
+    href: "/services/account",
+    subServices: [
+      "Bookkeeping & ledger management",
+      "Financial statement preparation",
+      "Cash flow tracking",
+      "Accounting software support",
+    ],
+  },
+  {
+    name: "Loans",
+    href: "/services/loans",
+    subServices: [
+      "Business loan assistance",
+      "Personal loan guidance",
+      "Loan documentation",
+      "Loan optimization",
+    ],
+  },
+  {
+    name: "Taxation",
+    href: "/services/taxation",
+    subServices: [
+      "Income tax return filing",
+      "GST registration & filing",
+      "Tax planning",
+      "Handling tax notices",
+    ],
+  },
+  {
+    name: "Risk Assessment",
+    href: "/services/risk-assessment",
+    subServices: [
+      "Financial risk analysis",
+      "Compliance risk review",
+      "Risk mitigation planning",
+      "Risk reporting",
+    ],
+  },
+  {
+    name: "Advisory",
+    href: "/services/advisory",
+    subServices: [
+      "Business advisory",
+      "Strategic planning",
+      "Growth consulting",
+      "Market analysis",
+    ],
+  },
+  {
+    name: "Business Auxiliary",
+    href: "/services/business-auxiliary",
+    subServices: [
+      "HR consulting",
+      "Legal documentation",
+      "Business process optimization",
+      "Vendor management",
+    ],
+  },
+  {
+    name: "Finance",
+    href: "/services/finance",
+    subServices: [
+      "Financial planning",
+      "Investment advisory",
+      "Budget management",
+      "Business financial consulting",
+    ],
+  },
+  {
+    name: "Business Setup",
+    href: "/services/business-setup",
+    subServices: [
+      "Company registration",
+      "Startup advisory",
+      "Trademark registration",
+      "Business licensing",
+    ],
+  },
+  {
+    name: "Corporate Compliance",
+    href: "/services/corporate-compliance",
+    subServices: [
+      "ROC filings",
+      "Annual compliance",
+      "Company law advisory",
+      "Legal documentation",
+    ],
+  },
+  {
+    name: "Payroll",
+    href: "/services/payroll",
+    subServices: [
+      "Salary processing",
+      "PF & ESI compliance",
+      "Payslip generation",
+      "Payroll reporting",
+    ],
+  },
+];
 /*export const testimonials = [
   {
     user: "John Doe",
