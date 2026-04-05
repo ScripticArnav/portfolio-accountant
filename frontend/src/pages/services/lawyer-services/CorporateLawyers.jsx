@@ -63,10 +63,11 @@ const CorporateLawyers = () => {
             <h3 className="font-bold text-slate-900 mb-2">Get Expert Legal Counsel</h3>
             <p className="text-slate-700 mb-4">
               Connect with experienced corporate lawyers for your business matters.
+            
             </p>
-            <button className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors">
+            <Link to="/Contact" className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors inline-block">
               Schedule Consultation
-            </button>
+            </Link>
           </div>
         </div>
       </div>

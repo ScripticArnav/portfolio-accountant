@@ -18,6 +18,19 @@ import IncomeTaxCalculator from "./pages/calculators/IncomeTaxCalculator";
 import SIPCalculator from "./pages/calculators/SIPCalculator";
 import TDSCalculator from "./pages/calculators/TDSCalculator";
 import HRACalculator from "./pages/calculators/HRACalculator";
+import HomeLoanEMICalculator from "./pages/calculators/HomeLoanEMICalculator";
+import SalaryCalculator from "./pages/calculators/SalaryCalculator";
+import MutualFundCalculator from "./pages/calculators/MutualFundCalculator";
+import RetirementCalculator from "./pages/calculators/RetirementCalculator";
+import EPFCalculator from "./pages/calculators/EPFCalculator";
+import PPFCalculator from "./pages/calculators/PPFCalculator";
+import NPSCalculator from "./pages/calculators/NPSCalculator";
+import GratuityCalculator from "./pages/calculators/GratuityCalculator";
+import InterestCalculator from "./pages/calculators/InterestCalculator";
+import FDCalculator from "./pages/calculators/FDCalculator";
+import LumpsumCalculator from "./pages/calculators/LumpsumCalculator";
+import RDCalculator from "./pages/calculators/RDCalculator";
+import BusinessSetupCalculator from "./pages/calculators/BusinessSetupCalculator";
 
 // ✅ services Pages
 import Account from "./pages/services/Account";
@@ -78,6 +91,19 @@ function App() {
             <Route path="/calculators/sip" element={<SIPCalculator />} />
             <Route path="/calculators/tds" element={<TDSCalculator />} />
             <Route path="/calculators/hra" element={<HRACalculator />} />
+            <Route path="/calculators/home-loan-emi" element={<HomeLoanEMICalculator />} />
+            <Route path="/calculators/salary" element={<SalaryCalculator />} />
+            <Route path="/calculators/mutual-fund" element={<MutualFundCalculator />} />
+            <Route path="/calculators/retirement" element={<RetirementCalculator />} />
+            <Route path="/calculators/epf" element={<EPFCalculator />} />
+            <Route path="/calculators/ppf" element={<PPFCalculator />} />
+            <Route path="/calculators/nps" element={<NPSCalculator />} />
+            <Route path="/calculators/gratuity" element={<GratuityCalculator />} />
+            <Route path="/calculators/interest" element={<InterestCalculator />} />
+            <Route path="/calculators/fd" element={<FDCalculator />} />
+            <Route path="/calculators/lumpsum" element={<LumpsumCalculator />} />
+            <Route path="/calculators/rd" element={<RDCalculator />} />
+            <Route path="/calculators/business-setup" element={<BusinessSetupCalculator />} />
 
             {/* ✅ Services sub-routes */}
             <Route path="/services/account" element={<Account />} />

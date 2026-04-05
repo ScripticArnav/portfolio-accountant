@@ -55,9 +55,7 @@ const ConsumerRetail = () => {
           <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg">
             <h3 className="font-bold text-slate-900 mb-2">Ready?</h3>
             <p className="text-slate-700 mb-4">File your retail complaint today.</p>
-            <button className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors">
-              Consult an Expert
-            </button>
+            <Link to="/Contact" className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors inline-block">Consult an Expert</Link>
           </div>
         </div>
       </div>
@@ -66,3 +64,4 @@ const ConsumerRetail = () => {
 };
 
 export default ConsumerRetail;
+

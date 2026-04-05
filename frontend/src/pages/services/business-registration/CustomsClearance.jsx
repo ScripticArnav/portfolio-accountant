@@ -58,9 +58,7 @@ const CustomsClearance = () => {
             <p className="text-slate-700 mb-4">
               Our experts are ready to assist you with customs clearance services.
             </p>
-            <button className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors">
-              Consult an Expert
-            </button>
+            <Link to="/Contact" className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors inline-block">Consult an Expert</Link>
           </div>
         </div>
       </div>
@@ -69,3 +67,4 @@ const CustomsClearance = () => {
 };
 
 export default CustomsClearance;
+
