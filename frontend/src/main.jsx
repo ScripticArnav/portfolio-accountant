@@ -39,20 +39,21 @@ import IncomeTaxCalculator from './pages/calculators/IncomeTaxCalculator.jsx'
 import SIPCalculator from './pages/calculators/SIPCalculator.jsx'
 import TDSCalculator from './pages/calculators/TDSCalculator.jsx'
 import HRACalculator from './pages/calculators/HRACalculator.jsx'
-
-// ============================================================
-// PRIMARY SERVICE CATEGORY PAGES
-// ============================================================
-import Account from './pages/services/Account'
-import Finance from './pages/services/Finance'
-import Taxation from './pages/services/Taxation'
-import Payroll from './pages/services/Payroll'
-import CorporateCompliance from './pages/services/CorporateCompliance'
-import BusinessSetup from './pages/services/BusinessSetup'
-import Loans from './pages/services/Loans'
-import RiskAssessment from './pages/services/RiskAssessment'
-import Advisory from './pages/services/Advisory'
-import BusinessAuxiliary from './pages/services/BusinessAuxiliary'
+import EPFCalculator from './pages/calculators/EPFCalculator.jsx'
+import FDCalculator from './pages/calculators/FDCalculator.jsx'
+import RDCalculator from './pages/calculators/RDCalculator.jsx'
+import LumpsumCalculator from './pages/calculators/LumpsumCalculator.jsx'
+import CompoundInterestCalculator from './pages/calculators/CompoundInterestCalculator.jsx'
+import SimpleInterestCalculator from './pages/calculators/SimpleInterestCalculator.jsx'
+import NPSCalculator from './pages/calculators/NPSCalculator.jsx'
+import PPFCalculator from './pages/calculators/PPFCalculator.jsx'
+import GratuityCalculator from './pages/calculators/GratuityCalculator.jsx'
+import InterestCalculator from './pages/calculators/InterestCalculator.jsx'
+import HomeLoanEMICalculator from './pages/calculators/HomeLoanEMICalculator.jsx'
+import SalaryCalculator from './pages/calculators/SalaryCalculator.jsx'
+import MutualFundCalculator from './pages/calculators/MutualFundCalculator.jsx'
+import RetirementCalculator from './pages/calculators/RetirementCalculator.jsx'
+import BusinessSetupCalculator from './pages/calculators/BusinessSetupCalculator.jsx'
 
 // ============================================================
 // MEGA MENU CATEGORY INDEX PAGES
@@ -295,26 +296,7 @@ import WillDocument from './pages/services/documentation/WillDocument'
 // ============================================================
 // OTHERS SERVICES (30+ pages including calculators, NGO, property, personal)
 // ============================================================
-import AllCalculators from './pages/services/others/AllCalculators'
-import IncomeTaxCalculatorService from './pages/services/others/IncomeTaxCalculator'
-import HRACalculatorService from './pages/services/others/HRACalculator'
 import GSTPracticeConsulting from './pages/services/others/GSTPracticeConsulting'
-import EMICalculatorService from './pages/services/others/EMICalculator'
-import HomeLoanEMICalculator from './pages/services/others/HomeLoanEMICalculator'
-import SalaryCalculator from './pages/services/others/SalaryCalculator'
-import MutualFundCalculator from './pages/services/others/MutualFundCalculator'
-import RetirementCalculator from './pages/services/others/RetirementCalculator'
-import EPFCalculator from './pages/services/others/EPFCalculator'
-import PPFCalculator from './pages/services/others/PPFCalculator'
-import NPSCalculator from './pages/services/others/NPSCalculator'
-import GratuityCalculator from './pages/services/others/GratuityCalculator'
-import CompoundInterestCalculator from './pages/services/others/CompoundInterestCalculator'
-import FDCalculator from './pages/services/others/FDCalculator'
-import LumpsumCalculator from './pages/services/others/LumpsumCalculator'
-import TDSCalculatorService from './pages/services/others/TDSCalculator'
-import RDCalculator from './pages/services/others/RDCalculator'
-import SIPCalculatorService from './pages/services/others/SIPCalculator'
-import BusinessSetupCalculator from './pages/services/others/BusinessSetupCalculator'
 import Fundraising from './pages/services/others/Fundraising'
 import PitchDeck from './pages/services/others/PitchDeck'
 import BusinessLoan from './pages/services/others/BusinessLoan'
@@ -355,7 +337,6 @@ import FinanceCompliance from './pages/services/others/FinanceCompliance'
 import NOCCompliance from './pages/services/others/NOCCompliance'
 import DisputeResolution from './pages/services/others/DisputeResolution'
 import TrademarkPractice from './pages/services/others/TrademarkPractice'
-import SimpleInterestCalculator from './pages/services/others/SimpleInterestCalculator'
 import StartupFunding from './pages/services/others/StartupFunding'
 
 const router = createBrowserRouter(
@@ -395,20 +376,21 @@ const router = createBrowserRouter(
       <Route path='calculators/sip' element={<SIPCalculator/>}/>
       <Route path='calculators/tds' element={<TDSCalculator/>}/>
       <Route path='calculators/hra' element={<HRACalculator/>}/>
-
-      {/* ============================================================ */}
-      {/* PRIMARY SERVICE CATEGORY ROUTES */}
-      {/* ============================================================ */}
-      <Route path='services/account' element={<Account/>}/>
-      <Route path='services/finance' element={<Finance/>}/>
-      <Route path='services/taxation' element={<Taxation/>}/>
-      <Route path='services/payroll' element={<Payroll/>}/>
-      <Route path='services/corporate-compliance' element={<CorporateCompliance/>}/>
-      <Route path='services/business-setup' element={<BusinessSetup/>}/>
-      <Route path='services/loans' element={<Loans/>}/>
-      <Route path='services/risk-assessment' element={<RiskAssessment/>}/>
-      <Route path='services/advisory' element={<Advisory/>}/>
-      <Route path='services/business-auxiliary' element={<BusinessAuxiliary/>}/>
+      <Route path='calculators/epf' element={<EPFCalculator/>}/>
+      <Route path='calculators/fd' element={<FDCalculator/>}/>
+      <Route path='calculators/rd' element={<RDCalculator/>}/>
+      <Route path='calculators/lumpsum' element={<LumpsumCalculator/>}/>
+      <Route path='calculators/compound-interest' element={<CompoundInterestCalculator/>}/>
+      <Route path='calculators/simple-interest' element={<SimpleInterestCalculator/>}/>
+      <Route path='calculators/nps' element={<NPSCalculator/>}/>
+      <Route path='calculators/ppf' element={<PPFCalculator/>}/>
+      <Route path='calculators/gratuity' element={<GratuityCalculator/>}/>
+      <Route path='calculators/interest' element={<InterestCalculator/>}/>
+      <Route path='calculators/home-loan-emi' element={<HomeLoanEMICalculator/>}/>
+      <Route path='calculators/salary' element={<SalaryCalculator/>}/>
+      <Route path='calculators/mutual-fund' element={<MutualFundCalculator/>}/>
+      <Route path='calculators/retirement' element={<RetirementCalculator/>}/>
+      <Route path='calculators/business-setup' element={<BusinessSetupCalculator/>}/>
 
       {/* ============================================================ */}
       {/* MEGA MENU CATEGORY INDEX ROUTES */}
@@ -651,11 +633,11 @@ const router = createBrowserRouter(
       {/* ============================================================ */}
       {/* OTHERS SERVICES ROUTES (30+ routes) */}
       {/* ============================================================ */}
-      <Route path='services/all-calculators' element={<AllCalculators/>}/>
-      <Route path='services/income-tax-calculator' element={<IncomeTaxCalculatorService/>}/>
-      <Route path='services/hra-calculator' element={<HRACalculatorService/>}/>
-      <Route path='services/gst-calculator' element={<GSTPracticeConsulting/>}/>
-      <Route path='services/emi-calculator' element={<EMICalculatorService/>}/>
+      <Route path='services/all-calculators' element={<GSTCalculator/>}/>
+      <Route path='services/income-tax-calculator' element={<IncomeTaxCalculator/>}/>
+      <Route path='services/hra-calculator' element={<HRACalculator/>}/>
+      <Route path='services/gst-calculator' element={<GSTCalculator/>}/>
+      <Route path='services/emi-calculator' element={<EMICalculator/>}/>
       <Route path='services/home-loan-emi-calculator' element={<HomeLoanEMICalculator/>}/>
       <Route path='services/salary-calculator' element={<SalaryCalculator/>}/>
       <Route path='services/mutual-fund-calculator' element={<MutualFundCalculator/>}/>
@@ -664,12 +646,12 @@ const router = createBrowserRouter(
       <Route path='services/ppf-calculator' element={<PPFCalculator/>}/>
       <Route path='services/nps-calculator' element={<NPSCalculator/>}/>
       <Route path='services/gratuity-calculator' element={<GratuityCalculator/>}/>
-      <Route path='services/interest-calculator' element={<CompoundInterestCalculator/>}/>
+      <Route path='services/interest-calculator' element={<InterestCalculator/>}/>
       <Route path='services/fd-calculator' element={<FDCalculator/>}/>
       <Route path='services/lumpsum-calculator' element={<LumpsumCalculator/>}/>
-      <Route path='services/tds-calculator' element={<TDSCalculatorService/>}/>
+      <Route path='services/tds-calculator' element={<TDSCalculator/>}/>
       <Route path='services/rd-calculator' element={<RDCalculator/>}/>
-      <Route path='services/sip-calculator' element={<SIPCalculatorService/>}/>
+      <Route path='services/sip-calculator' element={<SIPCalculator/>}/>
       <Route path='services/business-setup-calculator' element={<BusinessSetupCalculator/>}/>
       <Route path='services/fundraising' element={<Fundraising/>}/>
       <Route path='services/pitch-deck' element={<PitchDeck/>}/>

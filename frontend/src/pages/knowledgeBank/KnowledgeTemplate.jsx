@@ -4,7 +4,7 @@ const KnowledgeTemplate = ({ title, description, cards }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary-600">
-            Knowledge Bank
+            {/* Knowledge Bank */}
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mt-4">{title}</h1>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">{description}</p>

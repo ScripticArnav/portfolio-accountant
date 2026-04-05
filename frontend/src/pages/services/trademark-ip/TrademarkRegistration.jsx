@@ -72,9 +72,10 @@ const TrademarkRegistration = () => {
             <p className="text-slate-700 mb-4">
               Don't wait - register your trademark and secure your brand identity.
             </p>
-            <button className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors">
+            
+            <Link to="/Contact" className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors inline-block">
               Start Trademark Registration
-            </button>
+            </Link>
           </div>
         </div>
       </div>

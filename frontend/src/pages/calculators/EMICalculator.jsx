@@ -1,28 +1,92 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const EMICalculator = () => {
-  const [loan, setLoan] = useState("");
-  const [rate, setRate] = useState("");
-  const [time, setTime] = useState("");
+  const [loanAmount, setLoanAmount] = useState('');
+  const [interestRate, setInterestRate] = useState('');
+  const [loanTenure, setLoanTenure] = useState('');
 
-  const monthlyRate = rate / 12 / 100;
-  const emi =
-    loan && rate && time
-      ? (loan * monthlyRate * Math.pow(1 + monthlyRate, time)) /
-        (Math.pow(1 + monthlyRate, time) - 1)
-      : 0;
+  const calculateEMI = () => {
+    const P = Number(loanAmount);
+    const r = Number(interestRate) / 100 / 12;
+    const n = Number(loanTenure) * 12;
+
+    if (!P || !r || !n) return { emi: 0, totalAmount: 0, totalInterest: 0 };
+
+    const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+    const totalAmount = emi * n;
+    const totalInterest = totalAmount - P;
+
+    return { emi, totalAmount, totalInterest };
+  };
+
+  const result = calculateEMI();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">EMI Calculator</h2>
+    <div className="min-h-screen bg-gray-50 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <Link to="/services/others" className="flex items-center text-blue-600 hover:text-blue-700 mb-6">
+          ← Back to Services
+        </Link>
 
-        <input type="number" placeholder="Loan Amount" value={loan} onChange={(e)=>setLoan(e.target.value)} className="w-full mb-4 p-3 border rounded-lg"/>
-        <input type="number" placeholder="Interest Rate (%)" value={rate} onChange={(e)=>setRate(e.target.value)} className="w-full mb-4 p-3 border rounded-lg"/>
-        <input type="number" placeholder="Time (months)" value={time} onChange={(e)=>setTime(e.target.value)} className="w-full mb-4 p-3 border rounded-lg"/>
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">EMI Calculator</h1>
 
-        <div>
-          <p>EMI: ₹ {emi ? emi.toFixed(2) : "0.00"}</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Loan Amount (₹)</label>
+                <input
+                  type="number"
+                  placeholder="Enter loan amount"
+                  value={loanAmount}
+                  onChange={(e) => setLoanAmount(e.target.value)}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Interest Rate (% per annum)</label>
+                <input
+                  type="number"
+                  placeholder="Enter interest rate"
+                  value={interestRate}
+                  onChange={(e) => setInterestRate(e.target.value)}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Loan Tenure (years)</label>
+                <input
+                  type="number"
+                  placeholder="Enter loan tenure"
+                  value={loanTenure}
+                  onChange={(e) => setLoanTenure(e.target.value)}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">EMI Calculation</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Monthly EMI:</span>
+                  <span className="font-semibold">₹{result.emi.toLocaleString('en-IN')}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Total Interest:</span>
+                  <span className="font-semibold">₹{result.totalInterest.toLocaleString('en-IN')}</span>
+                </div>
+                <div className="border-t pt-3 flex justify-between">
+                  <span className="text-gray-900 font-medium">Total Amount:</span>
+                  <span className="font-bold text-lg">₹{result.totalAmount.toLocaleString('en-IN')}</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

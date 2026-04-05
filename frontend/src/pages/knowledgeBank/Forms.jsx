@@ -4,22 +4,37 @@ const Forms = () => {
   return (
     <KnowledgeTemplate
       title="Forms"
-      description="Common tax and regulatory forms with quick guidance to reduce filing errors."
+      description="Essential forms and templates for business compliance and documentation."
       cards={[
         {
-          title: "Form 16/16A",
-          description: "TDS certificates issued to employees and vendors.",
-          items: ["Download samples", "Filing tips", "Common errors to avoid"]
-        },
-        {
           title: "GST Forms",
-          description: "GST returns and reconciliation forms for small and large taxpayers.",
-          items: ["GSTR-1", "GSTR-3B", "GSTR-9C"]
+          description: "Registration, filing, and amendment forms for GST compliance.",
+          items: ["GST REG-01", "GSTR-1/3B", "GST ITC-01"]
         },
         {
-          title: "Company Filings",
-          description: "ROC forms for annual returns and event-based updates.",
-          items: ["AOC-4", "MGT-7", "ADT-1"]
+          title: "Company Forms",
+          description: "MCA forms for incorporation, changes, and annual filings.",
+          items: ["INC-32", "DIR-12", "MGT-7"]
+        },
+        {
+          title: "Tax Forms",
+          description: "Income tax and TDS forms for individual and business returns.",
+          items: ["ITR-1 to ITR-7", "Form 16/16A", "Form 26AS"]
+        },
+        {
+          title: "License Forms",
+          description: "Application forms for various business licenses and registrations.",
+          items: ["IEC Application", "FSSAI Form", "MSME Registration"]
+        },
+        {
+          title: "Trademark Forms",
+          description: "IP registration and protection forms for brands and logos.",
+          items: ["TM-A", "TM-1", "TM-60"]
+        },
+        {
+          title: "Property Forms",
+          description: "Documentation forms for property registration and transfers.",
+          items: ["Sale Deed", "Lease Agreement", "Power of Attorney"]
         }
       ]}
     />

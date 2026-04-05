@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,6 +21,31 @@ const Navbar = () => {
     navigate("/");
   };
 
+  // Prevent body scroll when dropdown or mobile menu is open
+  useEffect(() => {
+    if (hoveredMenu || mobileOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
+    };
+  }, [hoveredMenu, mobileOpen]);
+
+  // Set the first item as default when dropdown opens
+  useEffect(() => {
+    if (hoveredMenu && megaMenu[hoveredMenu]) {
+      setHoveredItem(megaMenu[hoveredMenu].left[0].title);
+    } else {
+      setHoveredItem(null);
+    }
+  }, [hoveredMenu]);
+
   const menuItems = [
     { label: "Business Registration", href: "/business-registration" },
     { label: "Tax & Compliance", href: "/tax-compliance" },
@@ -38,7 +63,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
               <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center shadow-md">
-                <span className="text-slate-900 font-bold text-xl">F</span>
+                <span className="text-slate-900 font-bold text-xl">AS</span>
               </div>
               <span className="text-white font-bold text-lg hidden sm:inline">
                 ASFintaccx
@@ -47,11 +72,14 @@ const Navbar = () => {
           </div>
 
           {/* "Consult an Expert" Button */}
-          <div className="hidden md:block">
-            <button className="px-4 py-2 bg-yellow-400 text-slate-900 text-sm font-bold rounded-md hover:bg-yellow-300 transition-colors duration-200">
+          {/* <div className="hidden md:block">
+            <Link
+              to="/Contact"
+              className="px-4 py-2 bg-yellow-400 text-slate-900 text-sm font-bold rounded-md hover:bg-yellow-300 transition-colors duration-200"
+            >
               Consult an Expert ▼
-            </button>
-          </div>
+            </Link>
+          </div> */}
 
           {/* Desktop Menu with Mega Menu */}
           <div className="hidden md:flex items-center space-x-1">
@@ -132,7 +160,7 @@ const Navbar = () => {
                       <span className="text-blue-600">👤</span>
                       <span className="text-sm text-slate-700">
                         Prefer to talk to a business advisor first?
-                        <Link to="#" className="text-blue-600 hover:underline ml-1">
+                        <Link to="/Contact" className="text-blue-600 hover:underline ml-1">
                           Book a call back
                         </Link>
                       </span>
@@ -190,9 +218,12 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="md:hidden bg-slate-800 border-t border-slate-700">
           <div className="px-4 pt-2 pb-4 space-y-2">
-            <button className="w-full py-3 px-4 bg-yellow-400 text-slate-900 text-base font-bold rounded-md hover:bg-yellow-300 transition-colors">
+            <Link
+              to="/Contact"
+              className="w-full py-3 px-4 bg-yellow-400 text-slate-900 text-base font-bold rounded-md hover:bg-yellow-300 transition-colors"
+            >
               Consult an Expert ▼
-            </button>
+            </Link>
 
             {menuItems.map((item) => (
               <Link

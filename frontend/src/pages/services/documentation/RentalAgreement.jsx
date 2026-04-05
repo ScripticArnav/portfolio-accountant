@@ -67,9 +67,8 @@ const RentalAgreement = () => {
             <p className="text-slate-700 mb-4">
               Protect your rental investment with a professional, legally sound agreement.
             </p>
-            <button className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors">
-              Get Rental Agreement
-            </button>
+            <Link to="/Contact" className="px-6 py-3 bg-yellow-400 text-slate-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors inline-block">Get Rental Agreement
+            </Link>
           </div>
         </div>
       </div>
@@ -78,3 +77,4 @@ const RentalAgreement = () => {
 };
 
 export default RentalAgreement;
+
