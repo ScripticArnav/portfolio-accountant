@@ -30,6 +30,40 @@ const DivorceLawyers = () => {
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What is Divorce Law?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Divorce law encompasses legal procedures to dissolve marriage bonds. Covers property division, alimony, child custody, and guardianship. Complex family law requiring expert navigation for fair outcomes and minimal emotional trauma. Contested/mutual divorced handled differently.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">How the Process Works?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Divorce Process:</strong> File petition in family court, serve spouse notice, negotiate settlement (custody, property, alimony), court mediation if contested, final judgment. Contested divorces involve court hearings. Mutual divorces are faster. Timeline: 6 months to 2+ years based on complexity.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Why Legal Help?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Protection & Fair Terms:</strong> Protects your rights in property, custody, alimony matters. Expert guidance ensures fair settlement and protects child interests. Legal representation strengthens your position. Prevents financial loss and unfair agreements.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Key Benefits</h3>
+              <ul className="text-slate-700 space-y-2">
+                <li>✓ Expert legal representation</li>
+                <li>✓ Fair property division</li>
+                <li>✓ Child custody protection</li>
+                <li>✓ Compassionate guidance</li>
+                <li>✓ Dispute resolution</li>
+              </ul>
+            </div>
+          </div>
+
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {subServices.map((service, idx) => (

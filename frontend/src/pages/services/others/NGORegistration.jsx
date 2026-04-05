@@ -30,6 +30,40 @@ const NGORegistration = () => {
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What is NGO?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                An NGO (Non-Governmental Organization) is a non-profit entity working for social welfare, charity, or community services. Operates independently from government with focus on humanitarian, environmental, educational, or social causes. Can be registered as Society, Trust, or Section 8 Company. Eligible for tax benefits and donations.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">How to Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Registration Steps:</strong> Register as Society/Trust with local authority or as Section-8 Company with MCA. Create bylaws/constitution, appoint governing body/board, open bank account, obtain 80G (tax exemption) and 12A certificates. File required documents and compliance forms. Timeline: 20-30 days.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Why Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Legal Recognition:</strong> Provides legal status and credibility for fundraising. Enables tax-exempt donations from individuals and corporations. Access to government grants and schemes. Creates accountability and transparency with beneficiaries and donors.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Key Benefits</h3>
+              <ul className="text-slate-700 space-y-2">
+                <li>✓ Government compliance</li>
+                <li>✓ Tax exemption benefits</li>
+                <li>✓ Fundraising credibility</li>
+                <li>✓ Donor tax deduction</li>
+                <li>✓ Legal protection</li>
+              </ul>
+            </div>
+          </div>
+
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {subServices.map((service, idx) => (

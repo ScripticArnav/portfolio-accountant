@@ -26,6 +26,40 @@ const TrademarkRegistration = () => {
             </ul>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What is Trademark?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                A Trademark is a unique identifier (name, logo, symbol, sound, color) that distinguishes your goods/services from competitors. Registered trademark provides legal ownership and exclusive rights. Protected under intellectual property law for 10 years (renewable). Essential asset for brand identity and market presence.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">How to Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Registration Process:</strong> File application with IP Office with commercial use proof, claims and description. Trademark is examined for conflicts, published for 4-month opposition period. If no objections, registration certificate is issued. Can file internationally. Timeline: 12-18 months typically.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Why Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Brand Protection:</strong> Prevents others from using similar marks. Enables legal action against infringement. Creates valuable brand asset that increases company worth. Required for e-commerce, international expansion, and franchising. Establishes brand identity and customer loyalty.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Key Benefits</h3>
+              <ul className="text-slate-700 space-y-2">
+                <li>✓ Exclusive rights to brand name/logo</li>
+                <li>✓ Legal protection against infringement</li>
+                <li>✓ Enhanced business value & credibility</li>
+                <li>✓ Right to take legal action</li>
+                <li>✓ Valuable business asset</li>
+              </ul>
+            </div>
+          </div>
+
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Registration Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {[

@@ -30,6 +30,40 @@ const PrivateLimitedCompany = () => {
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What is it?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                A Private Limited Company is a business structure where liability is limited to the shareholders' investment. It's incorporated under the Companies Act with a minimum of 2 directors and minimum paid-up capital. The company has a separate legal identity distinct from its owners.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">How it Works?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Process:</strong> Company name approval → Document preparation → Filing with ROC → Issue of CIN → Opening bank account → Applying for GST/TAN. Our experts handle all paperwork and ensure compliance at each stage. Timeline typically: 10-15 working days.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Why Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Credibility & Growth:</strong> Separates personal and business liability. Essential for institutional credibility with banks and investors. Required to raise capital, take loans, or expand business. Enables business deals with government and multinational companies.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Key Benefits</h3>
+              <ul className="text-slate-700 space-y-2">
+                <li>✓ Limited liability protection</li>
+                <li>✓ Easy fund raising & investment</li>
+                <li>✓ Perpetual succession</li>
+                <li>✓ Tax benefits & deductions</li>
+                <li>✓ Enhanced business credibility</li>
+              </ul>
+            </div>
+          </div>
+
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Sub-Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {subServices.map((service, idx) => (

@@ -30,6 +30,40 @@ const SoleProprietorship = () => {
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What is it?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                A Sole Proprietorship is the simplest business structure owned and operated by one individual. The owner has complete control and responsibility for the business. Personal and business identities are the same legally, though you can operate under a different business name.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">How it Works?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Simple Setup:</strong> Register under GST (if applicable), obtain business license/permits, open a business bank account. File annual income tax returns and maintain basic compliance records. Minimal documentation required compared to other structures. Timeline: 5-7 working days.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Why Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Legal Recognition:</strong> Establish legitimacy with clients and vendors. Required for obtaining business licenses and permits. Can help secure business loans and contracts. Simplifies tax filing and financial management.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Key Benefits</h3>
+              <ul className="text-slate-700 space-y-2">
+                <li>✓ Easiest & Most Flexible Business Structure</li>
+                <li>✓ Minimal Compliance Requirements</li>
+                <li>✓ Low Registration Costs</li>
+                <li>✓ Easy Decision Making</li>
+                <li>✓ Direct Control Over Business</li>
+              </ul>
+            </div>
+          </div>
+
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {subServices.map((service, idx) => (

@@ -1,0 +1,290 @@
+{
+  "SoleProprietorship": {
+    "what": "A sole proprietorship is the simplest form of business ownership where a single individual owns and operates the business. The owner has complete control over all business decisions and receives all profits directly. There is no legal separation between the owner and the business entity.",
+    "how": "Register your business by obtaining a PAN card, opening a business bank account, and registering for GST if turnover exceeds the threshold. File the Udyam registration (formerly MSME) online through the official portal. Obtain any necessary licenses and permits related to your specific business type.",
+    "why": "Sole proprietorship is the fastest and most cost-effective way to start a business with minimal compliance requirements. It requires less paperwork compared to formal entities like companies or partnerships. You maintain complete autonomy in decision-making and can quickly adapt to market changes.",
+    "benefits": [
+      "Minimal registration and compliance costs",
+      "Complete control over business operations and decisions",
+      "Simple accounting and tax filing procedures",
+      "Quick and easy setup process",
+      "Direct access to all business profits"
+    ]
+  },
+  "PartnershipFirm": {
+    "what": "A partnership firm is a business structure where two or more individuals share ownership, management, and profits according to a partnership deed. Each partner contributes capital, skills, or both and shares liability for business obligations. Partners collaborate to grow the business while maintaining their individual professional status.",
+    "how": "Draft a comprehensive partnership deed outlining profit sharing, roles, and responsibilities of each partner. Register the partnership with the Registrar of Firms (vary by state). Obtain PAN for the partnership, open a joint business account, and register for GST if applicable.",
+    "why": "Partnership allows combining resources, expertise, and capital of multiple individuals to strengthen the business. Shared responsibilities reduce individual workload and provide operational flexibility. Partners can leverage each other's networks and skills for business growth.",
+    "benefits": [
+      "Pooled financial resources and expertise",
+      "Shared responsibility and reduced individual burden",
+      "Greater credibility and trust in the business market",
+      "Flexible fund management and profit sharing",
+      "Simple formation compared to corporate structures"
+    ]
+  },
+  "OnePersonCompany": {
+    "what": "A One Person Company (OPC) is a corporate entity where a single individual acts as both the owner and shareholder. It provides the benefits of incorporation with the simplicity of sole proprietorship. The company has a separate legal identity from its owner, providing limited liability protection.",
+    "how": "Choose a unique company name and obtain approval from the Registrar of Companies (RoC). Prepare the Memorandum of Association and Articles of Association, obtain DSC (Digital Signature Certificate), and file incorporation documents online. Complete the incorporation process and register for GST and TDS as required.",
+    "why": "OPC provides limited liability protection while maintaining ease of operations and minimal compliance requirements. It enhances business credibility and makes it easier to attract investors or secure business loans. The company can acquire property, enter contracts, and operate independently from the owner.",
+    "benefits": [
+      "Limited liability protection for personal assets",
+      "Separate legal entity for better business credibility",
+      "Easier access to business loans and credit",
+      "Perpetual existence independent of ownership changes",
+      "Professional business structure at lower compliance cost"
+    ]
+  },
+  "LimitedLiabilityPartnership": {
+    "what": "A Limited Liability Partnership (LLP) combines the flexibility of partnership with the limited liability protection of a company. Partners enjoy the benefits of shared management while protecting personal assets from business liabilities. It is ideal for professional firms like consulting, law, and accounting practices.",
+    "how": "Prepare LLP agreement outlining partner contributions, profit sharing, and management structure. Register with the Registrar of Limited Liability Partnerships and obtain registration certificate. Apply for PAN, open a business account, and register for GST if turnover exceeds threshold limits.",
+    "why": "LLP provides limited liability protection while maintaining operational flexibility and reduced regulatory burden compared to private companies. It allows efficient capital management and is highly suitable for professional service providers. Partners can focus on their expertise while enjoying protection against co-partner liabilities.",
+    "benefits": [
+      "Limited liability protection for all partners",
+      "Flexible management and profit-sharing arrangements",
+      "Reduced compliance burden compared to private companies",
+      "Professional structure suitable for service providers",
+      "Easy continuation despite partner changes"
+    ]
+  },
+  "GSTRegistration": {
+    "what": "GST (Goods and Services Tax) registration is a mandatory requirement for businesses with turnover exceeding specified thresholds or involved in specific activities. It integrates multiple indirect taxes into a single unified tax system. Registration enables businesses to collect tax from customers and claim input tax credit on business expenses.",
+    "how": "Apply for GST registration through the GST portal (www.gst.gov.in) using your PAN and other business details. Upload supporting documents including business proof, address verification, and authorization letter. Receive acknowledgment and after verification, download the GST certificate with a unique GSTIN number.",
+    "why": "GST registration is legally mandatory for most businesses and mandatory for inter-state supplies regardless of turnover. It allows businesses to claim input tax credit, reducing overall tax burden and improving profitability. Registration also enhances business credibility and enables participation in government tenders.",
+    "benefits": [
+      "Access to input tax credit on business purchases",
+      "Compliance with legal requirement and avoidance of penalties",
+      "Improved business credibility and customer trust",
+      "Eligibility to supply to other registered businesses and governments",
+      "Simplified tax accounting through standardized system"
+    ]
+  },
+  "IncomeTaxFiling": {
+    "what": "Income Tax Filing is the annual process of reporting your income, deductions, and tax liability to the Income Tax Department. Every individual, HUF, partnership, and company earning income above the prescribed threshold must file returns. Filing ensures legal compliance and provides documentation of financial records for future needs.",
+    "how": "Gather financial documents including salary slips, investment proofs, and expense records for the financial year. Fill out the appropriate ITR form based on your income source and business type. Calculate tax liability considering deductions, credits, and applicable tax slabs, then submit online before the deadline.",
+    "why": "Filing income tax returns is a legal obligation that provides legal immunity and enables claim of refunds if eligible. It establishes tax compliance history required for loans, visas, and business credibility. Regular filing prevents penalties and legal complications while building a clean financial record.",
+    "benefits": [
+      "Legal compliance and avoidance of penalties and prosecution",
+      "Claim refunds if tax withheld exceeds liability",
+      "Establish credibility for loans and credit applications",
+      "Maintain solid financial records for future reference",
+      "Eligibility for government schemes and programs"
+    ]
+  },
+  "CorporateTax": {
+    "what": "Corporate Tax refers to the income tax levied on the profits of companies and registered partnerships. Companies must file annual tax returns showing their income, expenses, depreciation, and taxable profits. The tax rate varies based on company turnover and other applicable provisions under the Income Tax Act.",
+    "how": "Maintain detailed books of accounts and prepare audited financial statements (if turnover exceeds threshold). Calculate taxable income after deducting applicable expenses, depreciation, and eligible deductions. File corporate tax return along with financial statements and audit report before the specified deadline.",
+    "why": "Corporate tax filing is a mandatory legal requirement for all registered companies and partnerships. Timely filing ensures compliance with tax authorities and avoids penalties and interest charges. It provides documented proof of financial stability for stakeholder confidence and future compliance needs.",
+    "benefits": [
+      "Legal compliance with tax authority requirements",
+      "Access to various tax deductions and exemptions",
+      "Avoidance of penalties, interest, and legal proceedings",
+      "Enhanced transparency and corporate governance",
+      "Improved credibility with investors and stakeholders"
+    ]
+  },
+  "ESIRegistration": {
+    "what": "ESI (Employees' State Insurance) Registration is a mandatory social security scheme for businesses employing workers. It provides medical and cash benefits to workers and their dependents for sickness, disability, employment injury, and maternity. Both employer and employee contribute to the scheme with the employer paying majority of the contribution.",
+    "how": "Register with the ESI office by submitting the ESI-1 form along with business registration documents, PAN, and employee details. Obtain the ESI code and communicate it to all employees. Start contributing on a monthly basis by calculating employee salary based on ESI wage rates and depositing contributions to ESI.",
+    "why": "ESI registration is legally mandatory for factories and other establishments with 10 or more workers in most states. It provides workers with comprehensive medical and income security, reducing their financial burden during hardships. Registration demonstrates employer's commitment to worker welfare and compliance with labour laws.",
+    "benefits": [
+      "Mandatory social security coverage for workers",
+      "Medical and cash benefits for employee emergencies",
+      "Reduced employee out-of-pocket healthcare expenses",
+      "Enhanced employee satisfaction and reduced turnover",
+      "Legal compliance with labour and social security laws"
+    ]
+  },
+  "TrademarkRegistration": {
+    "what": "Trademark Registration is the legal process of protecting unique brands, logos, names, and symbols identifying your business or products. A registered trademark provides exclusive rights to use the brand in India and prevents others from using similar marks. Registration provides evidence of ownership and enables legal action against infringement.",
+    "how": "Conduct a trademark search to ensure your mark is unique and not identical to existing trademarks. File an application with the IP Office including the mark details, goods/services classification, and specification. After examination by the IP Office, publish in the Trademark Journal and handle any oppositions before receiving the registration certificate.",
+    "why": "Trademark registration protects your brand identity and business reputation from unauthorized use by competitors. It provides exclusive legal rights to use the mark, increasing brand value and market recognition. Registration is crucial for expanding business into new markets and licensing opportunities.",
+    "benefits": [
+      "Exclusive legal rights to use the brand for 10 years",
+      "Strong protection against brand counterfeiting and piracy",
+      "Enhanced brand value and customer recognition",
+      "Legal standing to take action against infringement",
+      "Increased attractiveness for licensing and franchising opportunities"
+    ]
+  },
+  "PatentRegistration": {
+    "what": "Patent Registration is the process of securing exclusive rights to an invention, preventing others from making, using, or selling the patented technology. Patents apply to novel inventions, processes, and improvements in industrial and technical sectors. A registered patent provides legal monopoly on the invention for a specified period.",
+    "how": "Prepare a detailed patent specification describing the invention, its technical benefits, and how it works. File a patent application with the IP Office including claims, drawings, and abstract. The application undergoes examination for originality, novelty, and non-obviousness before being published and eventually granted.",
+    "why": "Patent registration protects technological innovations from being copied, providing competitive advantage in the market. It enables inventors to commercialize their inventions through licensing or direct manufacturing. Patents are valuable assets that can be sold, licensed, or mortgaged for business growth.",
+    "benefits": [
+      "Exclusive 20-year monopoly on the invention in India",
+      "Prevention of competitor access to your technology",
+      "Revenue generation through licensing and royalties",
+      "Increased market value and competitive advantage",
+      "Asset for business growth and potential sale"
+    ]
+  },
+  "CopyrightRegistration": {
+    "what": "Copyright Registration protects original creative works including literary works, music, films, software, and artistic creations. Copyright automatically exists upon creation but registration provides stronger legal evidence of ownership. It prevents others from reproducing, distributing, or publicly displaying your work without permission.",
+    "how": "Complete the copyright application form with details of your creative work, including title, nature, and creation date. Submit the application with relevant documents (published or unpublished work samples) to the Copyright Office. Upon examination and approval, receive a copyright registration certificate valid for the creator's lifetime plus 60 years.",
+    "why": "Copyright registration establishes legal proof of ownership enabling easier enforcement against infringement and unauthorized copying. It protects the economic interests of creators allowing them to monetize their work through licensing. Registration is essential for creators seeking legal action against copyright violators.",
+    "benefits": [
+      "Legal proof of original work ownership and creation date",
+      "Exclusive right to reproduce and distribute the work",
+      "Lifetime protection of creative work (plus 60 years)",
+      "Strong evidence in copyright infringement cases",
+      "Revenue generation through licensing and permissions"
+    ]
+  },
+  "DesignRegistration": {
+    "what": "Design Registration protects the visual appearance and aesthetic design of a product or article, including shape, pattern, color, and ornamentation. It prevents others from manufacturing or selling products with identical or similar designs without permission. Design registration is ideal for products in fashion, furniture, electronic goods, and packaging.",
+    "how": "Document your design with clear drawings or photographs showing all angles and visual elements. Prepare a design specification describing the distinctive features and aesthetic elements. File the application with the IP Office including design drawings, specification, and product description.",
+    "why": "Design registration provides exclusive rights to the visual design of products, protecting against copying and counterfeiting. It adds market value to products by establishing brand identity through distinctive aesthetics. Registration enables legal action against design piracy and unauthorized reproduction.",
+    "benefits": [
+      "Exclusive 10-year protection for product design",
+      "Prevention of design copying and counterfeiting",
+      "Enhanced product market value and brand identity",
+      "Legal standing against unauthorized design reproduction",
+      "Exclusive manufacturing and distribution rights"
+    ]
+  },
+  "DivorceLawyers": {
+    "what": "Divorce lawyers provide comprehensive legal counsel for dissolution of marriage proceedings including property settlement, custody arrangements, maintenance, and alimony. They represent clients in matrimonial matters ensuring all legal rights are protected. Expert lawyers help navigate emotional and complex legal processes with professionalism.",
+    "how": "Consult with a divorce lawyer to review your case, understand legal options, and discuss applicable laws. The lawyer will prepare necessary legal documents, file petitions, and represent you in court proceedings. They negotiate settlements or present your case before the judge to secure favorable outcomes.",
+    "why": "Professional divorce lawyers ensure your legal rights are protected and help secure fair property settlements and custody arrangements. They navigate complex family law procedures reducing stress and emotional burden. Expert guidance ensures optimal outcomes in contested or complicated divorce matters.",
+    "benefits": [
+      "Expert knowledge of family law and matrimonial procedures",
+      "Protection of personal and financial interests",
+      "Fair property division and settlement negotiation",
+      "Custody and guardianship arrangements support",
+      "Reduced stress through professional legal representation"
+    ]
+  },
+  "CorporateLawyers": {
+    "what": "Corporate lawyers provide legal guidance on business formation, contracts, mergers, acquisitions, compliance, and corporate governance matters. They represent corporations in negotiating complex business agreements and handling regulatory compliance. Corporate lawyers ensure businesses operate within legal frameworks and protect corporate interests.",
+    "how": "Engage corporate lawyers for legal reviews of business agreements before signing to identify risks and negotiate favorable terms. They provide ongoing compliance advice, handle contract disputes, and represent the company in corporate transactions. Lawyers draft corporate policies and maintain compliance with statutory requirements.",
+    "why": "Corporate lawyers protect businesses from legal risks and financial losses through proper contract management and compliance. They facilitate smooth business transactions, mergers, and acquisitions with proper due diligence. Professional legal guidance ensures appropriate corporate governance and shareholder protection.",
+    "benefits": [
+      "Protection from contractual risks and disputes",
+      "Smooth execution of mergers and acquisitions",
+      "Compliance with corporate and regulatory requirements",
+      "Expert negotiation of complex business agreements",
+      "Proper corporate governance and shareholder protection"
+    ]
+  },
+  "PropertyLawyers": {
+    "what": "Property lawyers specialize in real estate matters including purchase, sale, lease agreements, title verification, and property disputes. They handle property transactions ensuring legal compliance, proper documentation, and protection of buyer interests. Property lawyers resolve boundary disputes, inheritance issues, and encroachment problems.",
+    "how": "Hire a property lawyer to conduct title searches and verify property ownership before purchase. They review purchase agreements, negotiate terms, and ensure all legal documentation is properly executed. Lawyers handle registration with appropriate authorities and resolve any legal issues affecting the property.",
+    "why": "Property lawyers protect clients from costly legal pitfalls by verifying title clarity and identifying encumbrances before purchase. They ensure proper legal documentation preventing future disputes and ownership challenges. Professional guidance prevents fraudulent transactions and ensures buyer protection.",
+    "benefits": [
+      "Thorough title verification and ownership clarity",
+      "Protection from property fraud and disputes",
+      "Proper legal documentation and registration",
+      "Dispute resolution for boundary and inheritance issues",
+      "Avoidance of costly legal problems post-purchase"
+    ]
+  },
+  "CriminalLawyers": {
+    "what": "Criminal lawyers represent clients in criminal matters including investigation, bail proceedings, and trial representation. They defend clients' rights during police investigations, ensure fair treatment, and present strong defense strategies in court. Criminal lawyers handle cases ranging from minor offenses to serious felonies.",
+    "how": "Engage a criminal lawyer immediately upon arrest or police notice to protect your legal rights. They represent you in bail hearings, police interrogation, and ensure proper legal procedures are followed. Lawyers build defense strategies based on case facts, evidence, and applicable criminal laws.",
+    "why": "Criminal lawyers ensure your fundamental rights are protected during police investigation and court proceedings. They challenge weak evidence, identify procedural violations, and present strong defenses reducing sentencing. Professional legal representation significantly improves outcomes in criminal cases.",
+    "benefits": [
+      "Protection of fundamental rights during investigation",
+      "Expert defense strategy and courtroom representation",
+      "Identification of weak evidence and legal violations",
+      "Favorable bail and sentencing recommendations",
+      "Reduced penalties and acquittal possibilities"
+    ]
+  },
+  "NDA": {
+    "what": "A Non-Disclosure Agreement (NDA) is a legal contract protecting confidential business information from unauthorized disclosure to third parties. NDAs define what information is confidential and the obligations of parties not to share or use this information. They are essential before business negotiations, partnerships, or sharing proprietary information.",
+    "how": "Identify confidential information to be protected and draft NDA terms defining what qualifies as confidential. Specify the duration of confidentiality obligations and permitted uses of information. Both parties sign the agreement establishing legally binding obligations regarding information protection.",
+    "why": "NDAs provide legal protection for proprietary business information, trade secrets, and strategic plans from being misused by competitors. They establish clear expectations and enable legal recourse if confidential information is disclosed. NDAs create trust and security when sharing sensitive business information.",
+    "benefits": [
+      "Legal protection for proprietary and confidential information",
+      "Clear terms regarding information usage and sharing",
+      "Enforcement mechanism against unauthorized disclosure",
+      "Trust establishment in business relationships",
+      "Avoidance of competitive disadvantage from information leaks"
+    ]
+  },
+  "PartnershipDeed": {
+    "what": "A Partnership Deed is the foundational legal document establishing partnership agreements, roles, profit sharing ratios, and operational procedures. It outlines each partner's contributions, responsibilities, decision-making authority, and exit procedures. A well-drafted deed prevents disputes and clarifies expectations among partners.",
+    "how": "Discuss partnership terms with all partners including capital contribution, profit sharing, roles, and management authority. Draft comprehensive deed covering all partnership aspects and contingencies. All partners sign the deed before a notary public, establishing it as a binding legal document.",
+    "why": "Partnership deeds prevent disputes by clearly defining each partner's rights, responsibilities, and profit entitlements. They establish legal clarity on operational decisions, dispute resolution, and exit procedures. A professional deed protects all partners and ensures smooth partnership operations.",
+    "benefits": [
+      "Clear definition of partners' roles and responsibilities",
+      "Prevents disputes through defined profit-sharing ratios",
+      "Establishes decision-making authority and procedures",
+      "Provides legal basis for partner entry and exit",
+      "Protects individual interests through documented agreements"
+    ]
+  },
+  "EmploymentAgreement": {
+    "what": "An Employment Agreement is a binding contract between employer and employee specifying job terms, compensation, benefits, and employment conditions. It defines roles, reporting structure, performance expectations, and termination provisions. Employment agreements protect both employer and employee interests and ensure legal compliance.",
+    "how": "Prepare employment agreement covering job description, compensation, benefits, working hours, and leave policies. Specify performance expectations, confidentiality obligations, and intellectual property ownership. Both parties sign the agreement before employment begins, establishing mutual legal obligations.",
+    "why": "Employment agreements protect employers from disputes regarding compensation, benefits, and job expectations while protecting employees' rights. They establish clarity on termination procedures, notice periods, and severance obligations. Agreements ensure compliance with labour laws and prevent misunderstandings.",
+    "benefits": [
+      "Clear definition of job roles and responsibilities",
+      "Defined compensation and benefits structure",
+      "Protection of employer's intellectual property",
+      "Employee protections regarding termination and severance",
+      "Compliance with labour laws and regulations"
+    ]
+  },
+  "PowerOfAttorney": {
+    "what": "A Power of Attorney (PoA) is a legal document authorizing someone (attorney-in-fact) to act on your behalf in business, financial, or legal matters. It can be general (authorizing all matters) or specific (limited to certain transactions). PoA enables someone to manage affairs if you're unavailable or incapacitated.",
+    "how": "Identify trusted person to act as your attorney-in-fact and specify the scope of their authority (general or limited). Draft PoA document clearly defining authorized actions, powers, and duration. Sign the document before a notary public or witnesses (requirement varies by state) to establish its legal validity.",
+    "why": "PoA ensures important matters can be managed if you're unavailable, ill, or incapacitated, preventing business disruption. It provides legal authorization for designated individuals to conduct transactions on your behalf. PoA reduces dependency on court proceedings for permission in urgent situations.",
+    "benefits": [
+      "Authorized management of affairs during unavailability",
+      "Business continuity without disruption",
+      "Prevention of family disputes in decision-making",
+      "Cost-effective alternative to court guardianship",
+      "Flexibility in defining specific or general authorities"
+    ]
+  },
+  "NGORegistration": {
+    "what": "NGO Registration is the process of legally establishing a non-governmental organization for charitable, social, or educational purposes. Registration provides legal recognition, enables tax-exempt status, and allows acceptance of donations and grants. Registered NGOs gain credibility and legal standing to conduct charitable activities.",
+    "how": "Register NGO either as a Trust under Indian Trusts Act, 1882 or as a Society under Societies Registration Act. File constitutional documents, list of members/trustees, and organizational objectives with appropriate authorities. Obtain registration certificate and subsequently register for 80G exemption (tax-exempt donations) with Income Tax Department.",
+    "why": "NGO registration establishes legal identity enabling acceptance of donations and conducting charitable activities with legal protection. It provides 80G exemption allowing donors tax deductions, attracting more contributions. Registration enhances NGO credibility with donors, government agencies, and society.",
+    "benefits": [
+      "Legal recognition for charitable and social activities",
+      "80G exemption enabling tax-deductible donations",
+      "Eligibility for government grants and subsidies",
+      "Enhanced credibility with donors and stakeholders",
+      "Legal protection and perpetual existence"
+    ]
+  },
+  "TrustRegistration": {
+    "what": "Trust Registration is establishing a legal entity to hold and manage assets for beneficiaries according to trust terms. Trusts are created through trust deeds defining settlor's intentions, trustee roles, and beneficiary rights. Trusts provide wealth management, tax planning, and asset protection for future generations.",
+    "how": "Prepare trust deed specifying trust properties, beneficiaries, trustee roles, and distribution terms. Register the trust deed with appropriate authorities and obtain registration certificate. Open bank accounts in trust name and transfer properties through proper documentation to establish trust assets.",
+    "why": "Trusts provide legal frameworks for asset protection, wealth transfer, and tax-efficient management across generations. They ensure assets are managed according to settlor's wishes and beneficiaries are protected. Trusts provide clarity on succession planning and prevent family disputes.",
+    "benefits": [
+      "Legal framework for wealth management and succession planning",
+      "Asset protection and tax-efficient wealth transfer",
+      "Clear definition of beneficiary rights and protections",
+      "Prevention of family disputes over inheritance",
+      "Professional management through appointed trustees"
+    ]
+  },
+  "MarriageRegistration": {
+    "what": "Marriage Registration is the legal acknowledgment and documentation of marriage with governmental authorities. Registration provides legal proof of matrimonial relationship essential for inheritance, insurance, and other legal purposes. Registration is available under Hindu Marriage Act, Special Marriage Act, or personal religious laws.",
+    "how": "Apply for marriage registration with local registrar providing marriage certificate, identity proofs, and witness details. The registrar verifies information and may require attendance at verification hearing. Upon verification, the registrar issues official marriage certificate documenting the matrimonial relationship.",
+    "why": "Marriage registration provides legal documentation of matrimonial relationship enabling various legal and financial entitlements. It protects rights of both spouses and children regarding inheritance, guardianship, and succession. Registration prevents disputes regarding marital status and enables access to government benefits.",
+    "benefits": [
+      "Legal proof of matrimonial relationship",
+      "Inheritance and succession rights protection",
+      "Spousal benefits and entitlements under law",
+      "Children's legitimacy and inheritance rights",
+      "Evidence for insurance, banking, and visa purposes"
+    ]
+  },
+  "BusinessLoan": {
+    "what": "Business Loan provides financial assistance for business growth, expansion, working capital, or starting a new venture. Banks and financial institutions offer various loan products with different eligibility criteria and interest rates. Business loans enable business development without diluting existing ownership or equity.",
+    "how": "Assess your business financing needs and identify appropriate loan product from various lenders. Prepare business plan, financial statements, and loan application highlighting use of funds and repayment capacity. Submit loan application with required documents and undergo credit assessment before loan approval.",
+    "why": "Business loans provide capital for business expansion, working capital, equipment purchase, or establishing new ventures without ownership dilution. They enable businesses to capitalize on growth opportunities quickly with flexible repayment terms. Loans build business credit history improving future borrowing capacity.",
+    "benefits": [
+      "Capital for business growth and expansion",
+      "Flexible repayment terms matching business cash flow",
+      "Retention of complete business ownership",
+      "Building business credit history and profile",
+      "Tax deductible interest on business loans"
+    ]
+  }
+}

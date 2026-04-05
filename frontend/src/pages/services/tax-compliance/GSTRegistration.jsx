@@ -22,6 +22,40 @@ const GSTRegistration = () => {
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What Exactly?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                GST (Goods and Services Tax) is an indirect tax applicable on the supply of goods/services. Registration creates a unique identity (GSTIN) for your business. Licensed to collect GST on sales and claim input tax credit on purchases. Centralized tax system replacing multiple earlier taxes.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">How to Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Process:</strong> Prepare documents (PAN, Aadhar, Business proof), create login on GST portal, fill registration form (FORM GSTR-1), verify email and mobile OTP, submit application, receive GSTIN within 3-5 days. We handle entire process on your behalf. Timeline: 5-7 working days.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Why is it Important?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Legal & Financial Necessity:</strong> Mandatory for businesses above turnover threshold. Enables input tax credit claiming on business expenses. Required to operate B2B transactions and bid for government contracts. Non-registration leads to penalties and legal issues.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Key Benefits</h3>
+              <ul className="text-slate-700 space-y-2">
+                <li>✓ Input tax credit benefit</li>
+                <li>✓ Legal compliance & credibility</li>
+                <li>✓ Simplified return filing</li>
+                <li>✓ Better business reputation</li>
+                <li>✓ Enable B2B transactions</li>
+              </ul>
+            </div>
+          </div>
+
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Services Include</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {[

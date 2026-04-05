@@ -25,6 +25,40 @@ const LimitedLiabilityPartnership = () => {
             </ul>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">What is it?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                A Limited Liability Partnership (LLP) is a hybrid business structure combining the benefits of partnership and company. Partners have limited liability (liability limited to their investment), while maintaining flexibility in management. Each partner is not responsible for acts of other partners. Minimum 2 partners required.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">How it Works?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Registration:</strong> Prepare LLP Agreement, obtain Digital Signature for partners, register with MCA portal, register with GST (if applicable). Partners can contribute capital and manage business operations. File annual return and accounts with Registrar. Timeline: 12-15 working days.
+              </p>
+            </div>
+
+            <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Why Register?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                <strong>Protection & Flexibility:</strong> Protects personal assets with limited liability. Ideal for professional firms, consulting companies, and tech startups. Easier compliance than companies with greater flexibility. Enjoy partnership model with corporate-like protection.
+              </p>
+            </div>
+
+            <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Key Benefits</h3>
+              <ul className="text-slate-700 space-y-2">
+                <li>✓ Limited liability for all members</li>
+                <li>✓ Flexible management structure</li>
+                <li>✓ Lower compliance than companies</li>
+                <li>✓ Perpetual succession</li>
+                <li>✓ Easy fund raising & credibility</li>
+              </ul>
+            </div>
+          </div>
+
           <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Services Include</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {[
