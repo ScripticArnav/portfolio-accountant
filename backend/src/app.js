@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import authRoutes from "./routes/authRoutes.js";
+import bulletinRoutes from "./routes/bulletin.js";
 
 dotenv.config();
 
@@ -22,6 +23,9 @@ app.use(cookieParser());
 
 // ✅ Auth Routes
 app.use("/api/auth", authRoutes);
+
+// ✅ Bulletin Routes
+app.use("/bulletin", bulletinRoutes);
 
 // ✅ Contact Schema
 const contactSchema = new mongoose.Schema({
@@ -104,7 +108,6 @@ app.get('/blogs', (req, res) => {
 });
 
 app.post('/contact', async (req, res) => {
-  console.log("HIT API 🔥");
   const { name, email, phone, company, service, message } = req.body;
 
   try {

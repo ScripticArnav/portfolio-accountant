@@ -48,8 +48,6 @@ import BusinessAuxiliary from "./pages/services/BusinessAuxiliary";
 import Rules from "./pages/knowledgeBank/Rules";
 import Acts from "./pages/knowledgeBank/Acts";
 import Links from "./pages/knowledgeBank/Links";
-import Utilities from "./pages/knowledgeBank/Utilities";
-import Forms from "./pages/knowledgeBank/Forms";
 import Bulletins from "./pages/knowledgeBank/Bulletins";
 import Blogs from "./pages/knowledgeBank/Blogs";
 
@@ -121,8 +119,6 @@ function App() {
             <Route path="/knowledge-bank/rules" element={<Rules />} />
             <Route path="/knowledge-bank/acts" element={<Acts />} />
             <Route path="/knowledge-bank/links" element={<Links />} />
-            <Route path="/knowledge-bank/utilities" element={<Utilities />} />
-            <Route path="/knowledge-bank/forms" element={<Forms />} />
             <Route path="/knowledge-bank/bulletins" element={<Bulletins />} />
             <Route path="/knowledge-bank/blogs" element={<Blogs />} />
 

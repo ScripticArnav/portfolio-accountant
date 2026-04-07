@@ -5,6 +5,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
+import cron from "node-cron";
+
+import bulletinRoutes from "./routes/bulletin.js";
+import { fetchAllNews } from "./services/fetchNews.js";
 
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
@@ -23,6 +27,14 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/financial
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+app.use("/bulletin", bulletinRoutes);
+
+cron.schedule("*/30 * * * *", async () => {
+  await fetchAllNews();
+});
+
+fetchAllNews();
 
 // ✅ Schema (Form Data Save)
 const contactSchema = new mongoose.Schema({
