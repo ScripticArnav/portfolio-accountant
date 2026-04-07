@@ -25,9 +25,7 @@ import NotFound from './pages/NotFound.jsx'
 import Rules from './pages/knowledgeBank/Rules.jsx'
 import Acts from './pages/knowledgeBank/Acts.jsx'
 import Links from './pages/knowledgeBank/Links.jsx'
-import Utilities from './pages/knowledgeBank/Utilities.jsx'
 import Bulletins from './pages/knowledgeBank/Bulletins.jsx'
-import Forms from './pages/knowledgeBank/Forms.jsx'
 import Blogs from './pages/knowledgeBank/Blogs.jsx'
 
 // ============================================================
@@ -359,11 +357,9 @@ const router = createBrowserRouter(
       {/* ============================================================ */}
       {/* KNOWLEDGE BANK ROUTES */}
       {/* ============================================================ */}
-      <Route path='knowledge-bank/forms' element={<Forms/>}/>
       <Route path='knowledge-bank/rules' element={<Rules/>}/>
       <Route path='knowledge-bank/acts' element={<Acts/>}/>
       <Route path='knowledge-bank/links' element={<Links/>}/>
-      <Route path='knowledge-bank/utilities' element={<Utilities/>}/>
       <Route path='knowledge-bank/bulletins' element={<Bulletins/>}/>
       <Route path='knowledge-bank/blogs' element={<Blogs/>}/>
 
