@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ShieldCheckIcon, 
@@ -10,15 +9,6 @@ import {
 } from '@heroicons/react/24/outline';
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState('story');
-
-  const tabs = [
-    { id: 'story', title: 'Our Story', icon: '📖' },
-    { id: 'values', title: 'Core Values', icon: '🧭' },
-    { id: 'team', title: 'Our Team', icon: '👥' },
-    { id: 'approach', title: 'Our Approach', icon: '🔄' }
-  ];
-
   const teamMembers = [
     {
       name: 'Anirudh Saxena',
@@ -28,12 +18,7 @@ const About = () => {
     }
   ];
 
-  const stats = [
-    { number: '500+', label: 'Happy Clients' },
-    { number: '10+', label: 'Years Experience' },
-    { number: '50+', label: 'Expert Team' },
-    { number: '98%', label: 'Success Rate' }
-  ];
+  const teamGridClass = teamMembers.length === 1 ? 'grid-cols-1' : 'md:grid-cols-2 lg:grid-cols-4';
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -60,22 +45,6 @@ const About = () => {
               <UsersIcon className="w-5 h-5" />
               <span>500+ Clients</span>
             </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="group p-8 hover:bg-gradient-to-r hover:from-primary-50 hover:to-blue-50 rounded-3xl hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-semibold text-lg">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -141,30 +110,34 @@ const About = () => {
                 icon: ShieldCheckIcon,
                 title: 'Integrity',
                 desc: 'Uncompromising honesty and transparency in every transaction',
-                color: 'from-blue-500 to-indigo-600'
+                color: 'from-blue-500 to-indigo-600',
+                iconColor: 'text-slate-900'
               },
               {
                 icon: HeartIcon,
                 title: 'Client First',
                 desc: 'Your success is our priority. Always.',
-                color: 'from-emerald-500 to-green-600'
+                color: 'from-emerald-500 to-green-600',
+                iconColor: 'text-slate-900'
               },
               {
                 icon: LightBulbIcon,
                 title: 'Innovation',
                 desc: 'Pioneering solutions with cutting-edge technology',
-                color: 'from-purple-500 to-pink-600'
+                color: 'from-purple-500 to-pink-600',
+                iconColor: 'text-slate-900'
               },
               {
                 icon: ChartBarIcon,
                 title: 'Excellence',
                 desc: 'Delivering superior results consistently',
-                color: 'from-orange-500 to-red-600'
+                color: 'from-orange-500 to-red-600',
+                iconColor: 'text-slate-900'
               }
             ].map((value, index) => (
               <div key={index} className="group text-center p-10 rounded-3xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 bg-gradient-to-br from-gray-50 to-blue-50 hover:from-white hover:to-gray-50 border hover:border-emerald-200">
                 <div className={`w-24 h-24 ${value.color} rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300 shadow-2xl`}>
-                  <value.icon className="w-12 h-12 text-white" />
+                  <value.icon className={`w-12 h-12 ${value.iconColor}`} />
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h4>
                 <p className="text-gray-600 text-lg">{value.desc}</p>
@@ -179,7 +152,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <span className="inline-flex px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-lg font-semibold rounded-3xl mb-8 shadow-lg">
-              👥 Meet Your Experts
+              👥 Meet Your Expert
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Leadership Team with 
@@ -189,9 +162,13 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className={`grid ${teamGridClass} gap-8`}> 
             {teamMembers.map((member, index) => (
-              <div key={index} className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 hover:scale-[1.02]">
+              <Link
+                key={index}
+                to="/expert/anirudh-saxena"
+                className={`group block bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 hover:scale-[1.02] ${teamMembers.length === 1 ? 'mx-auto max-w-4xl' : ''}`}
+              >
                 <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 group-hover:from-primary-500 group-hover:to-primary-600 transition-all duration-700 overflow-hidden">
                   <img 
                     src={member.image} 
@@ -205,11 +182,11 @@ const About = () => {
                   <p className="text-primary-600 font-semibold mb-1">{member.role}</p>
                   <p className="text-sm text-gray-500">{member.credential}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
-          <div className="text-center mt-16">
+          {/* <div className="text-center mt-16">
             <Link
               to="/careers"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xl font-bold rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-xl"
@@ -219,7 +196,7 @@ const About = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -265,7 +242,7 @@ const About = () => {
       </section>
 
       {/* Data Security */}
-      <section className="py-24 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+      {/* <section className="py-24 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -318,10 +295,10 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Social Impact */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      {/* <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <span className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white text-lg font-semibold rounded-3xl mb-8 shadow-lg">
@@ -359,40 +336,60 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            Ready to Experience 
-            <span className="text-yellow-300 block">Financial Excellence?</span>
+      {/* <section className="py-32 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white relative overflow-hidden">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full blur-3xl opacity-10"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-3xl opacity-10"></div>
+        
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="inline-block px-6 py-2 mb-8 bg-white/20 backdrop-blur-xl rounded-full border border-white/30">
+            <span className="text-yellow-300 font-semibold">✨ Partnership Ready</span>
+          </div>
+          
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            Transform Your Business 
+            <span className="text-yellow-300 block">Journey Today</span>
           </h2>
-          <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-2xl mx-auto">
-            Partner with the team trusted by industry leaders for your financial success
+          
+          <p className="text-xl md:text-2xl mb-16 opacity-90 max-w-2xl mx-auto leading-relaxed">
+            Join 500+ businesses that have partnered with ASFintaccx Solutions for their financial and legal needs
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Link
-              to="/services"
+              to="/contact"
               className="group inline-flex items-center px-12 py-6 bg-white text-primary-600 text-xl font-bold rounded-3xl hover:bg-gray-50 hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-2xl"
             >
-              Explore Services
+              Book Free Consultation
               <svg className="ml-4 w-7 h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
             <Link
-              to="/contact"
-              className="inline-flex items-center px-12 py-6 border-4 border-white/30 text-white text-xl font-bold rounded-3xl hover:bg-white/10 hover:border-white/50 backdrop-blur-xl transition-all duration-500 hover:scale-105"
+              to="/client-portal"
+              className="inline-flex items-center px-12 py-6 border-4 border-white/40 text-white text-xl font-bold rounded-3xl hover:bg-white/10 hover:border-white hover:shadow-2xl backdrop-blur-xl transition-all duration-500 hover:scale-105"
             >
-              Get Free Consultation
+              Access Client Portal
               <svg className="ml-4 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.27 7.27c.883.883 2.317.883 3.2 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </Link>
           </div>
+          
+          <p className="text-lg opacity-80 mb-8">
+            Or call us directly:
+          </p>
+          <a 
+            href="tel:+919876543210" 
+            className="inline-flex items-center px-8 py-4 bg-yellow-300 text-primary-900 text-lg font-bold rounded-3xl hover:bg-yellow-200 hover:shadow-2xl transition-all duration-500"
+          >
+            <span className="text-2xl mr-3">📞</span>
+            +91 9876 543 210
+          </a>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

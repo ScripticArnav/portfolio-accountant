@@ -29,13 +29,13 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Link
+            {/* <Link
               to="/services"
               className="group inline-flex items-center px-8 py-4 bg-white text-primary-600 text-lg font-semibold rounded-xl hover:bg-gray-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 transform shadow-xl"
             >
               Explore Services
               <ArrowRightIcon className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
+            </Link> */}
             <Link
               to="/contact"
               className="group inline-flex items-center px-8 py-4 border-2 border-white text-white text-lg font-semibold rounded-xl hover:bg-white hover:text-primary-600 transition-all duration-300"

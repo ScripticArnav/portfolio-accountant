@@ -65,9 +65,12 @@ const Navbar = () => {
               <div className="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center shadow-md">
                 <span className="text-slate-900 font-bold text-xl">AS</span>
               </div>
-              <span className="text-white font-bold text-lg hidden sm:inline">
-                ASFintaccx
-              </span>
+              <div className="hidden sm:flex flex-col">
+                <span className="text-white font-bold text-lg leading-tight">
+                  ASFintaccx Solutions
+                </span>
+                <span className="text-xs text-gray-400">Financial Excellence</span>
+              </div>
             </Link>
           </div>
 
@@ -172,7 +175,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Side: Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* <div className="hidden md:flex items-center space-x-4">
             {isAuthenticated ? (
               <>
                 <Link
@@ -188,15 +191,17 @@ const Navbar = () => {
                   Logout
                 </button>
               </>
-            ) : (
+            ) : 
+            (
               <Link
                 to="/login"
                 className="px-6 py-2 bg-yellow-400 text-slate-900 text-sm font-bold rounded-md hover:bg-yellow-300 transition-colors duration-200"
               >
                 Login
               </Link>
-            )}
-          </div>
+            )
+            }
+          </div> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
@@ -241,34 +246,7 @@ const Navbar = () => {
             ))}
             
             <div className="border-t border-slate-700 pt-3 mt-3">
-              {isAuthenticated ? (
-                <>
-                  <Link
-                    to="/client-portal"
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-2 px-4 text-base font-medium text-yellow-400 hover:text-white"
-                  >
-                    Client Portal
-                  </Link>
-                  <button
-                    onClick={() => {
-                      handleLogout();
-                      setMobileOpen(false);
-                    }}
-                    className="w-full text-left py-3 px-4 bg-yellow-400 text-slate-900 text-base font-bold rounded-md hover:bg-yellow-300 transition-colors mt-2"
-                  >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <Link
-                  to="/login"
-                  onClick={() => setMobileOpen(false)}
-                  className="block w-full py-3 px-4 bg-yellow-400 text-slate-900 text-base font-bold rounded-md hover:bg-yellow-300 transition-colors text-center"
-                >
-                  Login
-                </Link>
-              )}
+              {/* Auth sections removed as per request */}
             </div>
           </div>
         </div>

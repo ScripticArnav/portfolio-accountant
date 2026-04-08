@@ -95,43 +95,119 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. Services Overview */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      {/* 3. Service Categories - Main Offering */}
+      <section className="py-24 bg-gradient-to-b from-white via-primary-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <span className="inline-flex px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-sm font-semibold rounded-full mb-6 shadow-lg">
-              Our Core Services
+              Primary Service Categories
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Comprehensive Financial 
-              <span className="text-primary-600">Solutions</span>
+              Navigate Our 
+              <span className="text-primary-600"> Service Ecosystem</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              End-to-end financial services tailored for businesses of all sizes across industries
+              Comprehensive solutions across six core service areas
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {(Array.isArray(services) ? services : []).map((service, index) => (
-              <ServiceCard key={service._id || index} service={service} delay={index * 100} />
+            {[
+              { 
+                title: 'Business Registration', 
+                desc: 'Company formation, GST registration, startup setup', 
+                icon: '🏢',
+                gradient: 'from-blue-500 to-blue-600',
+                link: '/services/business-registration',
+                count: '50+'
+              },
+              { 
+                title: 'Tax & Compliance', 
+                desc: 'ITR filing, GST compliance, TDS returns, tax planning', 
+                icon: '📊',
+                gradient: 'from-emerald-500 to-emerald-600',
+                link: '/services/tax-compliance',
+                count: '100+'
+              },
+              { 
+                title: 'Trademark & IP', 
+                desc: 'Patent registration, copyright protection, design filing', 
+                icon: '🔐',
+                gradient: 'from-purple-500 to-purple-600',
+                link: '/services/trademark-ip',
+                count: '80+'
+              },
+              { 
+                title: 'Lawyer Services', 
+                desc: 'Contract drafting, legal consultation, dispute resolution', 
+                icon: '⚖️',
+                gradient: 'from-orange-500 to-orange-600',
+                link: '/services/lawyer-services',
+                count: '40+'
+              },
+              { 
+                title: 'Documentation', 
+                desc: 'Agreements, MOUs, legal documents, templates', 
+                icon: '📝',
+                gradient: 'from-pink-500 to-pink-600',
+                link: '/services/documentation',
+                count: '30+'
+              },
+              { 
+                title: 'Other Services', 
+                desc: 'Specialized solutions for unique business needs', 
+                icon: '🎯',
+                gradient: 'from-red-500 to-red-600',
+                link: '/services/others',
+                count: '20+'
+              }
+            ].map((category, index) => (
+              <Link
+                key={index}
+                to={category.link}
+                className="group relative block"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-500 to-primary-700 rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className={`relative bg-white rounded-3xl p-8 h-full shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-3`}>
+                  <div className={`w-20 h-20 bg-gradient-to-br ${category.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transform transition-transform duration-300 shadow-xl`}>
+                    <span className="text-4xl">{category.icon}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">{category.title}</h3>
+                  <p className="text-gray-600 mb-5 leading-relaxed">{category.desc}</p>
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                    <span className="text-sm font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">{category.count} Services</span>
+                    <svg className="w-6 h-6 text-primary-600 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
             ))}
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/services"
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-xl font-bold rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-xl"
-            >
-              Explore All Services
-              <svg className="ml-4 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* 4. Why Choose Us */}
+      {/* 4. Trust Metrics / Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { metric: '500+', label: 'Happy Clients', icon: '😊' },
+              { metric: '10+', label: 'Years Experience', icon: '⭐' },
+              { metric: '$50M+', label: 'Portfolio Value', icon: '💼' },
+              { metric: '98%', label: 'Satisfaction Rate', icon: '✅' }
+            ].map((stat, index) => (
+              <div key={index} className="group text-center p-8 rounded-2xl bg-white/10 backdrop-blur-xl hover:bg-white/20 transition-all duration-300 hover:scale-110">
+                <div className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">{stat.icon}</div>
+                <h4 className="text-4xl font-bold mb-2 group-hover:text-primary-200 transition-colors">{stat.metric}</h4>
+                <p className="text-primary-100 text-lg">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Why Choose Us - Enhanced */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -165,79 +241,49 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 5. Global Services Overview */}
-    
-
-      {/* 6. Latest Updates / Calculators */}
-      <section className="py-24 bg-gray-900 text-white">
+      {/* 5. Knowledge Bank Preview */}
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Financial Tools at Your 
-              <span className="text-primary-400"> Fingertips</span>
+              Knowledge Bank - Your 
+              <span className="text-primary-400"> Learning Hub</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Instant calculators for GST, Tax, EMI, and investment planning
+              Stay informed with laws, regulations, bulletins, and expert insights
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
-              { title: 'GST Calculator', desc: 'Calculate GST instantly', icon: '🧮', link: '/calculators' },
-              { title: 'EMI Calculator', desc: 'Loan repayment planner', icon: '🏦', link: '/calculators' },
-              { title: 'Tax Calculator', desc: 'Income tax estimator', icon: '💸', link: '/calculators' },
-              { title: 'SIP Calculator', desc: 'Investment growth tracker', icon: '📈', link: '/calculators' }
-            ].map((calc, index) => (
-              <CalculatorCard key={index} calculator={calc} />
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <Link
-              to="/calculators"
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white text-xl font-bold rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-xl"
-            >
-              All Calculators
-              <svg className="ml-4 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Latest Blog Insights */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <span className="inline-flex px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800 text-white text-sm font-semibold rounded-full mb-6">
-              Latest Insights
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Stay Ahead with Expert 
-              <span className="text-primary-600">Insights</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {(Array.isArray(blogs) && blogs.length > 0) ? blogs.map((blog, index) => (
-              <BlogCard key={blog._id || blog.id || index} blog={blog} />
-            )) : Array(3).fill().map((_, index) => (
-              <BlogCard key={`fallback-blog-${index}`} blog={{
-                title: 'Sample Blog Post',
-                excerpt: 'Discover the latest trends in financial compliance...',
-                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
-                date: 'Jan 15, 2024'
-              }} />
+              { title: 'Laws & Acts', icon: '⚖️', link: '/knowledge-bank/acts', items: '50+ Acts', color: 'from-blue-500 to-blue-600' },
+              { title: 'Rules & Regulations', icon: '📋', link: '/knowledge-bank/rules', items: '100+ Rules', color: 'from-emerald-500 to-emerald-600' },
+              { title: 'Bulletins & Updates', icon: '📢', link: '/knowledge-bank/bulletins', items: '30+ Bulletins', color: 'from-purple-500 to-purple-600' },
+              { title: 'Important Links', icon:   '🔗', link: '/knowledge-bank/links', items: '25+ Links', color: 'from-orange-500 to-orange-600' }
+            ].map((kb, index) => (
+              <Link
+                key={index}
+                to={kb.link}
+                className="group relative"
+              >
+                <div className={ `bg-gradient-to-br ${kb.color} rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-4 group-hover:scale-105 h-full flex flex-col`}>
+                  <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{kb.icon}</div>
+                  <h4 className="text-2xl font-bold mb-3">{kb.title}</h4>
+                  <p className="text-white/80 mb-6 flex-grow">{kb.items}</p>
+                  <div className="flex items-center text-white/70 group-hover:text-white transition-colors">
+                    Explore →
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
 
           <div className="text-center">
             <Link
-              to="/blogs"
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-gray-900 to-gray-800 text-white text-xl font-bold rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-xl"
+              to="/knowledge-bank/rules"
+              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-xl font-bold rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-xl"
             >
-              Read All Articles
+              Explore Knowledge Bank
               <svg className="ml-4 w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -246,38 +292,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 8. CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your 
-            <span className="text-yellow-300">Financial Future?</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-primary-100 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Get your free financial health assessment and personalized consultation today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link
-              to="/contact"
-              className="group inline-flex items-center px-12 py-6 bg-white text-primary-600 text-xl font-bold rounded-3xl hover:bg-gray-50 hover:shadow-2xl hover:scale-105 transition-all duration-500 shadow-2xl"
-            >
-              Start Free Consultation
-              <svg className="ml-4 w-7 h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link
-              to="/client-portal"
-              className="inline-flex items-center px-12 py-6 border-4 border-white/30 text-white text-xl font-bold rounded-3xl hover:bg-white/10 hover:border-white/50 backdrop-blur-xl transition-all duration-500 hover:scale-105"
-            >
-              Client Portal
-              <svg className="ml-4 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
+
+
+
+      {/* 10. Footer CTA */}
     </div>
   );
 };
