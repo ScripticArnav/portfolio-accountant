@@ -20,7 +20,6 @@ export const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/service" },
   { label: "Testimonials", href: "/contact" },
-  { label: "Users", href: "/users" },
 ];
 
 export const megaMenu = {
@@ -374,7 +373,7 @@ export const megaMenu = {
         { label: "Acts", href: "/knowledge-bank/acts" },
         { label: "Links", href: "/knowledge-bank/links" },
         { label: "Bulletins", href: "/knowledge-bank/bulletins" },
-        { label: "Blogs", href: "/knowledge-bank/blogs" },
+        // { label: "Blogs", href: "/knowledge-bank/blogs" },
       ],
       "Calculator": [
         { label: "GST Calculator", href: "/calculators/gst" },

@@ -4,12 +4,8 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import ExpertDetail from "./pages/ExpertDetail";
 import Contact from "./pages/contact/Contact";
-import ClientLogin from "./pages/Login";
-import AdminLogin from "./pages/AdminLogin";
-import AdminDashboard from "./pages/AdminDashboard";
-import SignUp from "./pages/SignUp";
-import ClientPortal from "./pages/ClientPortal";
 
 // ✅ Calculator Pages
 import GSTCalculator from "./pages/calculators/GSTCalculator";
@@ -81,6 +77,8 @@ function App() {
             {/* ✅ Basic Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/expert/:expertId" element={<ExpertDetail />} />
+            <Route path="/expert/anirudh-saxena" element={<ExpertDetail />} />
 
             {/* ✅ IMPORTANT: Calculator sub-routes FIRST */}
             <Route path="/calculators/gst" element={<GSTCalculator />} />
@@ -143,13 +141,7 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
 
             {/* ✅ Login Routes - Separate for Client and Admin */}
-            <Route path="/login" element={<ClientLogin />} />
-            <Route path="/login/client" element={<ClientLogin />} />
-            <Route path="/login/admin" element={<AdminLogin />} />
-            <Route path="/signup" element={<SignUp />} />
-
-            <Route path="/client-portal" element={<ClientPortal />} />
-            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            {/* Routes removed as per request */}
 
             {/* ✅ Optional: 404 fallback */}
             <Route path="*" element={<div className="p-10 text-center">Page Not Found</div>} />

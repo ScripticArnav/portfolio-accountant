@@ -20,7 +20,7 @@ const ContactMapSection = () => {
           <div className="h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl">
             <iframe
               title="Office Location"
-              src="https://www.google.com/maps?q=LIG+1223+Kanpur+UP+208017&output=embed"
+              src="https://www.google.com/maps?q=26.478528,80.248972&output=embed"
               className="w-full h-full border-0"
               loading="lazy"
               allowFullScreen

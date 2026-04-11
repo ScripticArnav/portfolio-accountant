@@ -11,12 +11,8 @@ import Layout from './Layout.jsx'
 // ============================================================
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import ExpertDetail from './pages/ExpertDetail.jsx'
 import Contact from './pages/contact/Contact.jsx'
-import Careers from './pages/Careers.jsx'
-import Login from './pages/Login.jsx'
-import SignUp from './pages/SignUp.jsx'
-import Profile from './pages/Profile.jsx'
-import Users from './pages/Users.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 // ============================================================
@@ -346,13 +342,8 @@ const router = createBrowserRouter(
       {/* ============================================================ */}
       <Route path='/' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
+      <Route path='expert/anirudh-saxena' element={<ExpertDetail/>}/>
       <Route path='Contact' element={<Contact/>}/>
-      <Route path='careers' element={<Careers/>}/>
-      <Route path='signin' element={<Login/>}/>
-      <Route path='login' element={<Login/>}/>
-      <Route path='signup' element={<SignUp/>}/>
-      <Route path='profile' element={<Profile/>}/>
-      <Route path='users' element={<Users/>}/>
 
       {/* ============================================================ */}
       {/* KNOWLEDGE BANK ROUTES */}
