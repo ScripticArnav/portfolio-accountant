@@ -5,10 +5,48 @@ import {
   SparklesIcon,
   ShieldCheckIcon,
   ArrowsRightLeftIcon,
-  GlobeAltIcon
+  GlobeAltIcon,
+  CheckCircleIcon,
+  CreditCardIcon,
+  LightBulbIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
 
 const ExpertDetail = () => {
+  const qualifications = [
+    { title: 'LLB (Bachelor of Laws)', institution: 'Ram Janki College of Law', university: 'CSJM University', percentage: '65%', year: '2021', focus: 'Corporate laws, business regulations and legal framework applicable to businesses and compliance.' },
+    { title: 'CMA Intermediate', institution: 'Institute of Cost Accountants of India', university: 'ICAI', percentage: 'Group I: 50.75% | Group II: 64.50%', year: 'Dec-2020', focus: 'Cost accounting, financial management, taxation and performance management.' },
+    { title: 'Bachelor of Commerce (B.Com)', institution: 'DAV College', university: 'CSJM University', percentage: '52%', year: '2018', focus: 'Core subjects: accounting, finance, taxation and business management.' }
+  ];
+
+  const services = [
+    { icon: '📊', title: 'Income Tax Compliance & Advisory', desc: 'Professional income tax filing and strategic planning' },
+    { icon: '💰', title: 'GST Services', desc: 'GST registration, compliance, and advisory (Registered GST Practitioner)' },
+    { icon: '📈', title: 'Cost Accounting & Costing', desc: 'Cost analysis, management accounting, and financial optimization' },
+    { icon: '💼', title: 'Finance & Business Advisory', desc: 'Financial planning, business strategy, and corporate advisory' },
+    { icon: '✅', title: 'Compliance & Internal Audit', desc: 'Regulatory compliance and internal audit services' },
+    { icon: '🛂', title: 'Customs & Trade Services', desc: 'Customs clearance, import-export, and trade compliance' },
+    { icon: '🏢', title: 'Virtual CFO Services', desc: 'CFO-level financial management and reporting' },
+    { icon: '🚀', title: 'Startup & SME Consulting', desc: 'Business registration, funding readiness, and growth strategy' },
+    { icon: '⚖️', title: 'Legal & Trademark Services', desc: 'Legal advisory and trademark registration (Registered Trademark Attorney)' },
+    { icon: '🤖', title: 'AI & Tech Integration', desc: 'AI enthusiast with modern business solutions' }
+  ];
+
+  const expertise = [
+    'Income Tax Planning & Compliance',
+    'GST Advisory & Implementation',
+    'Cost Accounting & Management Accounting',
+    'Financial Advisory & Planning',
+    'Business Compliance & Audit',
+    'Customs & International Trade',
+    'Virtual CFO Services',
+    'Startup & SME Growth Strategy',
+    'Trademark & IP Advisory',
+    'Networking & Entrepreneurship',
+    'Insurance Solutions',
+    'Business Valuation'
+  ];
+
   return (
     <div className="bg-gray-50 min-h-screen">
       <section className="relative overflow-hidden bg-gradient-to-br from-primary-700 via-primary-800 to-slate-950 text-white py-24">
@@ -18,22 +56,25 @@ const ExpertDetail = () => {
             <div>
               <p className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white/10 text-sm font-semibold text-white/90 mb-6">
                 <ShieldCheckIcon className="w-5 h-5 text-yellow-300" />
-                Trusted Financial Advisor & Legal Strategist
+                Trusted Financial & Legal Advisor
               </p>
               <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-                Anirudh Saxena
+                Finance, Tax & Compliance Expert
               </h1>
-              <p className="text-xl md:text-2xl text-slate-200 max-w-xl leading-relaxed mb-8">
-                Founder & CEO at ASFintaccx Solutions — CMA, LLB, CA, CPA, MBA Finance. Guiding businesses through compliance, tax strategy, and corporate growth since 2013.
+              <p className="text-xl md:text-2xl text-slate-200 max-w-xl leading-relaxed mb-6">
+                Finance, Cost Accounting & Business Advisory Professional | CMA Finalist | ACCA (Applied Skills Completed) | LLB
+              </p>
+              <p className="text-lg text-slate-300 max-w-xl leading-relaxed mb-8">
+                Guiding businesses through financial compliance, tax strategy, legal advisory, and sustainable growth. Registered GST Practitioner & Trademark Attorney.
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white/90 ring-1 ring-white/10">
                   <AcademicCapIcon className="w-5 h-5 text-yellow-300" />
-                  Education-led strategy
+                  Education-First Approach
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white/90 ring-1 ring-white/10">
                   <BriefcaseIcon className="w-5 h-5 text-cyan-300" />
-                  12+ years experience
+                  Multi-Domain Expert
                 </span>
               </div>
             </div>
@@ -45,7 +86,7 @@ const ExpertDetail = () => {
                   <div className="h-72 rounded-3xl overflow-hidden bg-slate-900 shadow-inner">
                     <img
                       src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
-                      alt="Anirudh Saxena"
+                      alt="Finance & Business Advisor"
                       className="w-full h-full object-cover"
                     />
                   </div>
