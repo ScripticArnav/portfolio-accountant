@@ -47,12 +47,12 @@ const Navbar = () => {
   }, [hoveredMenu]);
 
   const menuItems = [
-    { label: "Business Registration", href: "/business-registration" },
-    { label: "Tax & Compliance", href: "/tax-compliance" },
-    { label: "Trademark & IP", href: "/trademark-ip" },
-    { label: "Lawyer Services", href: "/lawyer-services" },
-    { label: "Documentation", href: "/documentation" },
-    { label: "Others", href: "/others" },
+    { label: "Business Registration" },
+    { label: "Tax & Compliance" },
+    { label: "Trademark & IP" },
+    { label: "Lawyer Services" },
+    { label: "Documentation" },
+    { label: "Others" },
   ];
 
   return (
@@ -96,9 +96,8 @@ const Navbar = () => {
                   setHoveredItem(null);
                 }}
               >
-                <Link
-                  to={item.href}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center space-x-1 ${
+                <div
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center space-x-1 cursor-pointer ${
                     hoveredMenu === item.label
                       ? "text-yellow-400 bg-slate-800"
                       : "text-gray-300 hover:text-yellow-400 hover:bg-slate-800"
@@ -106,7 +105,7 @@ const Navbar = () => {
                 >
                   <span>{item.label}</span>
                   <span className="text-xs">▼</span>
-                </Link>
+                </div>
 
                 {/* Mega Menu Dropdown */}
                 {megaMenu[item.label] && (
