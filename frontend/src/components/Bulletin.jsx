@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import backendUrl from "../url";
 
 const Bulletin = () => {
   const [news, setNews] = useState([]);
@@ -11,7 +12,7 @@ const Bulletin = () => {
 
   const fetchNews = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/bulletin");
+      const res = await axios.get(`${backendUrl}/bulletin`);
       setNews(res.data);
     } catch (err) {
       console.error("Error fetching news:", err);
