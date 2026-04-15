@@ -135,18 +135,29 @@ app.post('/contact', async (req, res) => {
 
     await newContact.save();
 
+    const emailUser = process.env.EMAIL;
+    const emailPass = process.env.PASSWORD;
+
+    if (!emailUser || !emailPass) {
+      console.warn("Email credentials not configured. Skipping email notification.");
+      return res.status(200).json({
+        success: true,
+        message: 'Form submitted successfully. Email notification skipped because mail credentials are not configured.',
+      });
+    }
+
     // 🔹 Email setup
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
+        user: emailUser,
+        pass: emailPass,
       },
     });
 
     const mailOptions = {
-      from: process.env.EMAIL,
-      to: process.env.EMAIL,
+      from: emailUser,
+      to: emailUser,
       subject: 'New Contact Form Submission',
       html: `
         <h2>New Inquiry</h2>
@@ -159,19 +170,26 @@ app.post('/contact', async (req, res) => {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
-
-    res.status(200).json({
-      success: true,
-      message: 'Form submitted & email sent',
-    });
+    try {
+      await transporter.sendMail(mailOptions);
+      res.status(200).json({
+        success: true,
+        message: 'Form submitted & email sent',
+      });
+    } catch (emailError) {
+      console.error("Email send failed:", emailError);
+      res.status(200).json({
+        success: true,
+        message: 'Form submitted successfully, but email notification failed.',
+      });
+    }
 
   } catch (error) {
     console.log(error);
     res.status(500).json({
       success: false,
       message: 'Something went wrong',
-      error: error.message
+      error: error.message,
     });
   }
 });
