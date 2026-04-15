@@ -93,20 +93,20 @@ const ExpertDetail = () => {
                   <div className="space-y-4 text-slate-100">
                     <div>
                       <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Specialties</p>
-                      <p className="text-lg font-semibold">Tax Law, Corporate Compliance, Audit Strategy</p>
+                      <p className="text-lg font-semibold">Income Tax, GST, Cost Accounting, Finance Advisory</p>
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Approach</p>
-                      <p className="text-lg font-semibold">Education-led financial clarity with risk-aware execution</p>
+                      <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Credentials</p>
+                      <p className="text-lg font-semibold">GST Practitioner | Trademark Attorney | CMA | ACCA</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="rounded-2xl bg-slate-900/80 p-4">
-                        <p className="text-slate-400">Advisory Hours</p>
-                        <p className="text-white font-semibold">12,000+</p>
+                        <p className="text-slate-400">Qualifications</p>
+                        <p className="text-white font-semibold">5+</p>
                       </div>
                       <div className="rounded-2xl bg-slate-900/80 p-4">
-                        <p className="text-slate-400">Client Retention</p>
-                        <p className="text-white font-semibold">98%</p>
+                        <p className="text-slate-400">Service Areas</p>
+                        <p className="text-white font-semibold">10+</p>
                       </div>
                     </div>
                   </div>
@@ -122,30 +122,30 @@ const ExpertDetail = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary-600 mb-4">Professional Profile</p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">From education to execution.</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Expertise in Finance, Compliance & Legal Advisory</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Anirudh combines top-tier academic credentials with hands-on experience advising startups, SMEs, and established enterprises. His practical approach spans corporate finance, regulatory filings, intellectual property advisory, and growth-focused planning.
+                Finance, Cost Accounting & Business Advisory Professional with diverse qualifications spanning Law, Accounting, and Management. Registered GST Practitioner and Trademark Attorney committed to helping businesses navigate compliance, optimize finances, and achieve sustainable growth.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <SparklesIcon className="w-8 h-8 text-yellow-400 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Education</h3>
-                    <p className="text-gray-600">CMA, LLB, CA, CPA, MBA Finance — delivered with a focus on practical business outcomes.</p>
+                    <h3 className="text-xl font-semibold text-gray-900">Multi-Disciplinary Expertise</h3>
+                    <p className="text-gray-600">CMA Finalist, ACCA Applied Skills, LLB with specialization in finance, accounting, and legal compliance.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <BriefcaseIcon className="w-8 h-8 text-cyan-500 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Experience</h3>
-                    <p className="text-gray-600">12+ years in financial advisory, tax planning, corporate strategy, and legal risk management.</p>
+                    <h3 className="text-xl font-semibold text-gray-900">Comprehensive Services</h3>
+                    <p className="text-gray-600">Income tax, GST, cost accounting, finance advisory, compliance, customs, internal audit, and startup consulting.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <AcademicCapIcon className="w-8 h-8 text-emerald-500 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">Certifications</h3>
-                    <p className="text-gray-600">International finance certifications, professional accounting qualifications, and corporate law expertise.</p>
+                    <h3 className="text-xl font-semibold text-gray-900">Registered Credentials</h3>
+                    <p className="text-gray-600">Registered GST Practitioner and Registered Trademark Attorney with legal and compliance authority.</p>
                   </div>
                 </div>
               </div>
@@ -153,29 +153,33 @@ const ExpertDetail = () => {
 
             <div className="space-y-6">
               <div className="rounded-3xl border border-slate-200 p-8 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.24em] text-slate-500 mb-4">Academic Journey</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-slate-500 mb-4">Professional Qualifications</p>
                 <ul className="space-y-4 text-gray-700">
                   <li className="rounded-2xl bg-slate-50 p-4 shadow-sm">
-                    <p className="font-semibold">MBA in Finance</p>
-                    <p className="text-sm text-slate-500">Strategic financial planning, investment analysis, and corporate valuation</p>
+                    <p className="font-semibold">CMA Finalist</p>
+                    <p className="text-sm text-slate-500">Cost and Management Accountancy — Cost accounting, financial management, taxation</p>
                   </li>
                   <li className="rounded-2xl bg-slate-50 p-4 shadow-sm">
-                    <p className="font-semibold">Chartered Accountancy</p>
-                    <p className="text-sm text-slate-500">Advanced audit, taxation, and compliance expertise</p>
+                    <p className="font-semibold">ACCA (Applied Skills Completed)</p>
+                    <p className="text-sm text-slate-500">Association of Chartered Certified Accountants — Advanced accounting and audit expertise</p>
                   </li>
                   <li className="rounded-2xl bg-slate-50 p-4 shadow-sm">
-                    <p className="font-semibold">Law Degree (LLB)</p>
-                    <p className="text-sm text-slate-500">Corporate law, contract advisory, and risk mitigation</p>
+                    <p className="font-semibold">LLB (Bachelor of Laws)</p>
+                    <p className="text-sm text-slate-500">Legal framework for business, compliance, and corporate advisory</p>
                   </li>
                 </ul>
               </div>
               <div className="rounded-3xl border border-slate-200 p-8 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.24em] text-slate-500 mb-4">Expertise & Focus</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
-                  <span className="inline-flex items-center gap-3 rounded-2xl bg-slate-50 p-4">📌 Corporate Finance</span>
-                  <span className="inline-flex items-center gap-3 rounded-2xl bg-slate-50 p-4">📌 Tax Strategy</span>
-                  <span className="inline-flex items-center gap-3 rounded-2xl bg-slate-50 p-4">📌 Legal Compliance</span>
-                  <span className="inline-flex items-center gap-3 rounded-2xl bg-slate-50 p-4">📌 Business Advisory</span>
+                <p className="text-sm uppercase tracking-[0.24em] text-slate-500 mb-4">Registered Designations</p>
+                <div className="space-y-3 text-gray-700">
+                  <span className="inline-flex items-center gap-3 rounded-2xl bg-slate-50 p-4 w-full">
+                    <CheckCircleIcon className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                    Registered GST Practitioner
+                  </span>
+                  <span className="inline-flex items-center gap-3 rounded-2xl bg-slate-50 p-4 w-full">
+                    <CheckCircleIcon className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                    Registered Trademark Attorney
+                  </span>
                 </div>
               </div>
             </div>
@@ -185,38 +189,162 @@ const ExpertDetail = () => {
 
       <section className="py-24 bg-slate-950 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div className="mb-16 text-center">
+            <p className="text-sm uppercase tracking-[0.24em] text-cyan-300 mb-4">Comprehensive Services</p>
+            <h2 className="text-4xl font-bold mb-6">Tailored Solutions for Business Success</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">End-to-end professional services covering finance, compliance, legal advisory, and business growth strategies.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, idx) => (
+              <div key={idx} className="rounded-3xl bg-white/5 p-8 shadow-lg border border-white/10 hover:border-white/20 hover:bg-white/10 transition">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary-600 mb-4">Areas of Expertise</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Specialized Knowledge</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {expertise.map((exp, idx) => (
+              <div key={idx} className="flex items-center gap-3 p-4 rounded-2xl bg-primary-50 border border-primary-100">
+                <CheckCircleIcon className="w-6 h-6 text-primary-600 flex-shrink-0" />
+                <span className="text-gray-900 font-medium">{exp}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-gradient-to-br from-slate-100 to-primary-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-sm uppercase tracking-[0.24em] text-cyan-300 mb-4">Career Highlights</p>
-              <h2 className="text-4xl font-bold mb-6">Experience built on results.</h2>
-              <ul className="space-y-5 text-gray-300">
+              <p className="text-sm uppercase tracking-[0.24em] text-primary-600 mb-4 font-semibold">Educational Background</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">Foundation for Excellence</h2>
+              
+              <div className="space-y-6">
+                {qualifications.map((qual, idx) => (
+                  <div key={idx} className="rounded-3xl bg-white p-8 shadow-lg border-l-4 border-primary-600">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-2xl font-bold text-gray-900">{qual.title}</h3>
+                        <p className="text-primary-600 font-semibold mt-1">{qual.institution}</p>
+                      </div>
+                      <span className="text-3xl font-bold text-primary-100">{qual.year}</span>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-3">
+                      <span className="font-semibold">University:</span> {qual.university}
+                    </p>
+                    <p className="text-sm text-gray-600 mb-3">
+                      <span className="font-semibold">Performance:</span> {qual.percentage}
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">{qual.focus}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-primary-600 mb-4 font-semibold">Professional Journey</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">Growth Through Learning</h2>
+              
+              <div className="rounded-3xl bg-white p-10 shadow-xl mb-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="rounded-full bg-primary-600 text-white w-12 h-12 flex items-center justify-center text-xl font-bold">1</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Strong Foundation</h3>
+                    <p className="text-gray-600">Completed B.Com with 52% aggregate score, establishing core accounting and finance knowledge.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-3xl bg-white p-10 shadow-xl mb-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="rounded-full bg-primary-600 text-white w-12 h-12 flex items-center justify-center text-xl font-bold">2</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Professional Certification</h3>
+                    <p className="text-gray-600">CMA Intermediate focused on cost accounting and financial management — Group I: 50.75%, Group II: 64.50%.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-3xl bg-white p-10 shadow-xl">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="rounded-full bg-primary-600 text-white w-12 h-12 flex items-center justify-center text-xl font-bold">3</div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Legal & Compliance Expertise</h3>
+                    <p className="text-gray-600">LLB degree with focus on corporate laws, business regulations and legal framework for compliance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            <div className="rounded-3xl border border-slate-200 p-10 text-center hover:shadow-xl transition">
+              <LightBulbIcon className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Innovation-Focused</h3>
+              <p className="text-gray-600">AI Enthusiast with commitment to modern solutions and technology-driven business strategies.</p>
+            </div>
+            <div className="rounded-3xl border border-slate-200 p-10 text-center hover:shadow-xl transition">
+              <UserGroupIcon className="w-16 h-16 text-cyan-500 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Networking & Growth</h3>
+              <p className="text-gray-600">Interested in networking with new professionals and fostering entrepreneurial ventures.</p>
+            </div>
+            <div className="rounded-3xl border border-slate-200 p-10 text-center hover:shadow-xl transition">
+              <CreditCardIcon className="w-16 h-16 text-emerald-500 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Comprehensive Advisory</h3>
+              <p className="text-gray-600">Integrated approach combining finance, legal, and business strategy for holistic solutions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-slate-950 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-cyan-300 mb-4">Why Choose This Advisor</p>
+              <h2 className="text-4xl font-bold mb-8">Drive Results with Strategic Guidance</h2>
+              <ul className="space-y-6 text-gray-300">
                 <li className="rounded-3xl bg-white/5 p-6 shadow-lg border border-white/10">
-                  <p className="font-semibold text-white">Led strategic tax transformation for 50+ companies</p>
-                  <p className="mt-2 text-sm">Delivering better compliance, smarter savings, and more predictable cash flow.</p>
+                  <p className="font-semibold text-white mb-2">✓ Multi-Disciplinary Expertise</p>
+                  <p className="text-sm">Combines finance, accounting, legal knowledge, and business strategy in one advisor.</p>
                 </li>
                 <li className="rounded-3xl bg-white/5 p-6 shadow-lg border border-white/10">
-                  <p className="font-semibold text-white">Built an advisory framework for startup growth</p>
-                  <p className="mt-2 text-sm">From registration to funding readiness, with tax and legal clarity baked in.</p>
+                  <p className="font-semibold text-white mb-2">✓ Registered Professional Authority</p>
+                  <p className="text-sm">GST Practitioner and Trademark Attorney with legal standing and professional accountability.</p>
                 </li>
                 <li className="rounded-3xl bg-white/5 p-6 shadow-lg border border-white/10">
-                  <p className="font-semibold text-white">Designed compliance workflows for cross-border businesses</p>
-                  <p className="mt-2 text-sm">Ensuring regulatory comfort across India and international markets.</p>
+                  <p className="font-semibold text-white mb-2">✓ End-to-End Solutions</p>
+                  <p className="text-sm">From compliance and tax planning to startup advisory and business growth—comprehensive coverage.</p>
+                </li>
+                <li className="rounded-3xl bg-white/5 p-6 shadow-lg border border-white/10">
+                  <p className="font-semibold text-white mb-2">✓ Education-First Philosophy</p>
+                  <p className="text-sm">Empowers clients through understanding—making informed decisions with confidence.</p>
                 </li>
               </ul>
             </div>
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-10 shadow-2xl">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="rounded-3xl bg-yellow-300/20 p-4 text-yellow-300">
-                  <GlobeAltIcon className="w-8 h-8" />
-                </div>
-                <div>
-                  <p className="text-sm uppercase tracking-[0.24em] text-slate-300">Practice Pillars</p>
-                  <p className="text-2xl font-bold">Strategy, Education, Execution</p>
-                </div>
-              </div>
-              <div className="space-y-4 text-gray-200">
-                <p>From academic foundations to real-world execution, Anirudh builds every solution around what drives long-term business stability.</p>
-                <p>He mentors clients through every phase — discovery, compliance, growth, and future-proof planning.</p>
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-12 shadow-2xl text-center">
+              <GlobeAltIcon className="w-20 h-20 mx-auto mb-6 text-cyan-300" />
+              <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
+              <p className="text-gray-300 mb-8">Schedule a consultation to discuss your financial strategy, compliance needs, or business growth objectives.</p>
+              <div className="space-y-3">
+                <p className="text-sm text-gray-400">Whether you're a startup, SME, or established business, get tailored advice from a multi-domain professional.</p>
               </div>
             </div>
           </div>
@@ -225,12 +353,12 @@ const ExpertDetail = () => {
 
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm uppercase tracking-[0.24em] text-primary-600 mb-4">Connect with the expert</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Want the full advisory experience?</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">Schedule a consultation to discuss your business goals, compliance needs, or strategic growth plan.</p>
+          <p className="text-sm uppercase tracking-[0.24em] text-primary-600 mb-4 font-semibold">Ready to Work Together</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Transform Your Financial & Legal Strategy</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">Get expert guidance on tax planning, compliance, business strategy, and sustainable growth. Book a consultation today.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-5">
             <Link to="/contact" className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-primary-600 text-white text-lg font-semibold hover:bg-primary-700 transition">Book Consultation</Link>
-            {/* <Link to="/client-portal" className="inline-flex items-center justify-center px-10 py-5 rounded-full border border-slate-300 text-slate-900 text-lg font-semibold hover:bg-slate-100 transition">Open Client Portal</Link> */}
+            <a href="mailto:contact@example.com" className="inline-flex items-center justify-center px-10 py-5 rounded-full border-2 border-primary-600 text-primary-600 text-lg font-semibold hover:bg-primary-50 transition">Send Inquiry</a>
           </div>
         </div>
       </section>

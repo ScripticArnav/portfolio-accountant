@@ -1,0 +1,224 @@
+{
+  "expert": {
+    "name": "Finance & Compliance Expert",
+    "title": "Finance, Cost Accounting & Business Advisory Professional",
+    "headline": "Finance, Cost Accounting & Business Advisory Professional | CMA Finalist | ACCA (Applied Skills Completed) | LLB | GST Practitioner | Trademark Attorney | Founder – A.S. Fintaccx Solutions | Startup & SME Consultant | AI Enthusiast",
+    "tagline": "Guiding businesses through financial compliance, tax strategy, legal advisory, and sustainable growth.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    "about": "Finance, Cost Accounting & Business Advisory Professional with diverse qualifications spanning Law, Accounting, and Management. Registered GST Practitioner and Trademark Attorney committed to helping businesses navigate compliance, optimize finances, and achieve sustainable growth.",
+    
+    "qualifications": [
+      {
+        "id": 1,
+        "title": "CMA Finalist",
+        "institution": "Institute of Cost Accountants of India",
+        "university": "ICAI",
+        "percentage": "Group I: 50.75% | Group II: 64.50%",
+        "year": "Dec-2020",
+        "focus": "Cost accounting, financial management, taxation and performance management."
+      },
+      {
+        "id": 2,
+        "title": "ACCA (Applied Skills Completed)",
+        "institution": "Association of Chartered Certified Accountants",
+        "university": "ACCA",
+        "percentage": "Applied Skills Level - Completed",
+        "year": "In Progress",
+        "focus": "Advanced accounting, audit expertise, and financial reporting."
+      },
+      {
+        "id": 3,
+        "title": "LLB (Bachelor of Laws)",
+        "institution": "Ram Janki College of Law",
+        "university": "CSJM University",
+        "percentage": "65%",
+        "year": "2021",
+        "focus": "Corporate laws, business regulations and legal framework applicable to businesses and compliance."
+      },
+      {
+        "id": 4,
+        "title": "Bachelor of Commerce (B.Com)",
+        "institution": "DAV College",
+        "university": "CSJM University",
+        "percentage": "52%",
+        "year": "2018",
+        "focus": "Core subjects: accounting, finance, taxation and business management."
+      }
+    ],
+
+    "credentials": [
+      {
+        "id": 1,
+        "credential": "Registered GST Practitioner",
+        "description": "Authorized to provide GST advisory and compliance services",
+        "authority": "GST Council"
+      },
+      {
+        "id": 2,
+        "credential": "Registered Trademark Attorney",
+        "description": "Authorized to handle trademark registration and IP advisory",
+        "authority": "Indian IP Authority"
+      },
+      {
+        "id": 3,
+        "credential": "CMA Finalist",
+        "description": "Cost & Management Accountancy qualification",
+        "authority": "ICAI"
+      },
+      {
+        "id": 4,
+        "credential": "ACCA Applied Skills",
+        "description": "International Accounting Qualifications",
+        "authority": "ACCA"
+      }
+    ],
+
+    "expertise": [
+      "Income Tax Planning & Compliance",
+      "GST Advisory & Implementation",
+      "Cost Accounting & Management Accounting",
+      "Financial Advisory & Planning",
+      "Business Compliance & Audit",
+      "Customs & International Trade",
+      "Virtual CFO Services",
+      "Startup & SME Growth Strategy",
+      "Trademark & IP Advisory",
+      "Networking & Entrepreneurship",
+      "Insurance Solutions",
+      "Business Valuation",
+      "Internal Audit Services",
+      "Financial Risk Management"
+    ],
+
+    "services": [
+      {
+        "id": 1,
+        "icon": "📊",
+        "title": "Income Tax Compliance & Advisory",
+        "description": "Professional income tax filing and strategic planning for individuals and businesses",
+        "category": "Taxation"
+      },
+      {
+        "id": 2,
+        "icon": "💰",
+        "title": "GST Services",
+        "description": "GST registration, compliance, and advisory (Registered GST Practitioner)",
+        "category": "Compliance"
+      },
+      {
+        "id": 3,
+        "icon": "📈",
+        "title": "Cost Accounting & Costing",
+        "description": "Cost analysis, management accounting, and financial optimization",
+        "category": "Accounting"
+      },
+      {
+        "id": 4,
+        "icon": "💼",
+        "title": "Finance & Business Advisory",
+        "description": "Financial planning, business strategy, and corporate advisory",
+        "category": "Advisory"
+      },
+      {
+        "id": 5,
+        "icon": "✅",
+        "title": "Compliance & Internal Audit",
+        "description": "Regulatory compliance and internal audit services",
+        "category": "Audit"
+      },
+      {
+        "id": 6,
+        "icon": "🛂",
+        "title": "Customs & Trade Services",
+        "description": "Customs clearance, import-export, and trade compliance",
+        "category": "Trade"
+      },
+      {
+        "id": 7,
+        "icon": "🏢",
+        "title": "Virtual CFO Services",
+        "description": "CFO-level financial management and reporting",
+        "category": "Finance"
+      },
+      {
+        "id": 8,
+        "icon": "🚀",
+        "title": "Startup & SME Consulting",
+        "description": "Business registration, funding readiness, and growth strategy",
+        "category": "Consulting"
+      },
+      {
+        "id": 9,
+        "icon": "⚖️",
+        "title": "Legal & Trademark Services",
+        "description": "Legal advisory and trademark registration (Registered Trademark Attorney)",
+        "category": "Legal"
+      },
+      {
+        "id": 10,
+        "icon": "🤖",
+        "title": "AI & Tech Integration",
+        "description": "Modern business solutions with AI and technology integration",
+        "category": "Technology"
+      }
+    ],
+
+    "highlights": [
+      {
+        "id": 1,
+        "title": "Multi-Disciplinary Expertise",
+        "description": "Combines finance, accounting, legal knowledge, and business strategy in one advisor."
+      },
+      {
+        "id": 2,
+        "title": "Registered Professional Authority",
+        "description": "GST Practitioner and Trademark Attorney with legal standing and professional accountability."
+      },
+      {
+        "id": 3,
+        "title": "End-to-End Solutions",
+        "description": "From compliance and tax planning to startup advisory and business growth—comprehensive coverage."
+      },
+      {
+        "id": 4,
+        "title": "Education-First Philosophy",
+        "description": "Empowers clients through understanding—making informed decisions with confidence."
+      },
+      {
+        "id": 5,
+        "title": "Innovation-Focused",
+        "description": "AI Enthusiast with commitment to modern solutions and technology-driven business strategies."
+      }
+    ],
+
+    "professionalJourney": [
+      {
+        "step": 1,
+        "title": "Strong Foundation",
+        "description": "Completed B.Com with 52% aggregate score, establishing core accounting and finance knowledge."
+      },
+      {
+        "step": 2,
+        "title": "Professional Certification",
+        "description": "CMA Intermediate focused on cost accounting and financial management — Group I: 50.75%, Group II: 64.50%."
+      },
+      {
+        "step": 3,
+        "title": "Legal & Compliance Expertise",
+        "description": "LLB degree with focus on corporate laws, business regulations and legal framework for compliance."
+      },
+      {
+        "step": 4,
+        "title": "Advanced International Qualification",
+        "description": "ACCA Applied Skills Completed for global accounting standards and practices."
+      }
+    ],
+
+    "contact": {
+      "email": "contact@professionaladvisor.com",
+      "phone": "+91-XXXXXXXXXX",
+      "linkedin": "linkedin.com/in/yourprofile",
+      "website": "yourwebsite.com"
+    }
+  }
+}
