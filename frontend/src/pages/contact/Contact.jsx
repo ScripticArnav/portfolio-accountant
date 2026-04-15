@@ -75,7 +75,7 @@ const Contact = () => {
   try {
     setIsSubmitting(true);
 
-    const res = await fetch("http://localhost:8000/contact", {
+    const res = await fetch(`${backendUrl}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
