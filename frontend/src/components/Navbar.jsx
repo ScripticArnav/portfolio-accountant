@@ -67,7 +67,7 @@ const Navbar = () => {
               </div>
               <div className="hidden sm:flex flex-col">
                 <span className="text-white font-bold text-lg leading-tight">
-                  ASFintaccx Solutions
+                  ASFintaccx 
                 </span>
                 <span className="text-xs text-gray-400">Financial Excellence</span>
               </div>
