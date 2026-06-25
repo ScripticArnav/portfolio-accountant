@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowUpIcon,
@@ -5,12 +6,74 @@ import {
   PhoneIcon,
   MapPinIcon,
   BuildingOfficeIcon,
-  LinkIcon
+  LinkIcon,
+  ChatBubbleLeftRightIcon,
+  XMarkIcon
 } from '@heroicons/react/24/outline';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const [chatOpen, setChatOpen] = useState(false);
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([
+    { sender: 'bot', text: 'Hi there! Need help with accounting, tax, or compliance?' },
+  ]);
+  const chatRef = useRef(null);
+  const toggleButtonRef = useRef(null);
+
+  const closeChat = () => {
+    setChatOpen(false);
+    setMessages([
+      { sender: 'bot', text: 'Hi there! Need help with accounting, tax, or compliance?' },
+    ]);
+    setMessage('');
+  };
+
+  const toggleChat = () => {
+    if (chatOpen) {
+      closeChat();
+      return;
+    }
+    setChatOpen(true);
+  };
+
+  useEffect(() => {
+    if (!chatOpen) return;
+
+    const handleClickOutside = (event) => {
+      const target = event.target;
+      if (
+        chatRef.current &&
+        !chatRef.current.contains(target) &&
+        toggleButtonRef.current &&
+        !toggleButtonRef.current.contains(target)
+      ) {
+        closeChat();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [chatOpen]);
+
+  const handleSend = (event) => {
+    event.preventDefault();
+    const trimmed = message.trim();
+    if (!trimmed) return;
+
+    setMessages((prev) => [...prev, { sender: 'user', text: trimmed }]);
+    setMessage('');
+
+    setTimeout(() => {
+      setMessages((prev) => [
+        ...prev,
+        {
+          sender: 'bot',
+          text: 'Thank you! Our team will get back to you soon, or email us at info@asfintaccx.com.',
+        },
+      ]);
+    }, 600);
   };
 
   const currentYear = new Date().getFullYear();
@@ -176,14 +239,61 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Back to Top Button */}
+      {/* Chatbot Toggle Button */}
       <button
-        onClick={scrollToTop}
+        ref={toggleButtonRef}
+        onClick={toggleChat}
         className="fixed bottom-8 right-8 w-14 h-14 bg-primary-600 hover:bg-primary-500 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-3xl z-40 border-4 border-white/20"
-        aria-label="Back to top"
+        aria-label={chatOpen ? 'Close chatbot' : 'Open chatbot'}
       >
-        <ArrowUpIcon className="w-6 h-6" />
+        {chatOpen ? <XMarkIcon className="w-6 h-6" /> : <ChatBubbleLeftRightIcon className="w-6 h-6" />}
       </button>
+
+      {chatOpen && (
+        <div ref={chatRef} className="fixed bottom-24 right-6 w-80 max-w-full rounded-3xl bg-slate-950/95 border border-slate-700 shadow-2xl z-50 overflow-hidden">
+          <div className="bg-primary-600 px-4 py-3">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="font-semibold text-white">ASFintaccx Chat</p>
+                <p className="text-xs text-slate-200">Ask about taxes, bookkeeping, or services.</p>
+              </div>
+              <button onClick={toggleChat} aria-label="Close chatbot" className="text-white hover:text-slate-200">
+                <XMarkIcon className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+          <div className="h-72 overflow-y-auto px-4 py-3 space-y-3 bg-slate-950 text-sm text-slate-100">
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`rounded-2xl p-3 ${msg.sender === 'bot' ? 'bg-slate-800 self-start' : 'bg-primary-600 self-end text-white'}`}
+              >
+                <p>{msg.text}</p>
+              </div>
+            ))}
+          </div>
+          <form onSubmit={handleSend} className="border-t border-slate-700 bg-slate-900 p-3">
+            <label htmlFor="chat-input" className="sr-only">
+              Type your message
+            </label>
+            <div className="flex gap-2">
+              <input
+                id="chat-input"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="flex-1 rounded-2xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/40 outline-none"
+                placeholder="Type a message..."
+              />
+              <button
+                type="submit"
+                className="rounded-2xl bg-primary-600 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-500 transition"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
     </footer>
   );
 };
